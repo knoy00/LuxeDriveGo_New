@@ -13,24 +13,27 @@ import Payment from '../assets/images/Payment.jpeg'
 import Scanning from '../assets/images/Scanning.png'
 import ebike_mono from '../assets/images/ebike_mono.jpeg'
 import {useRef, useState} from 'react'
-import { Dock } from 'lucide-react'
-function ElectricBike() {
+import LoaderScreen from '../components/LoaderScreen'
 
-    const [isLoaded, setIsLoaded] = useState(true);
-    
+const imagesToLoad = 2;
+function ElectricBike() {
+    const [isLoaded, setIsLoaded] = useState(0);
+    const handleImgLoad = () => {
+        setIsLoaded((prev) => prev + 1)
+    }
+    const allImagesLoaded = isLoaded === imagesToLoad;
 
 
     const ref2 = useRef(null);
     const ref3 = useRef(null);
-
     const isInView2 = useInView(ref2, { once: true });
     const isInView3 = useInView(ref3, { once: true });
-    
-    
-
 
   return (
-    <div>
+    <>
+        {!allImagesLoaded && <LoaderScreen />}
+        {allImagesLoaded && (
+        <div>
         <ScrollToTop />
         <Navbar />
         <div className='w-full font-helvetica'>
@@ -58,11 +61,12 @@ function ElectricBike() {
                         No more waiting, no more stress
                     </motion.p>
 
-                    <div className='w-full bg-black'>
+                    <div className='w-full '>
                         <motion.img 
                             // loading='lazy' 
                             src={handlebars} 
                             alt="Bike Handle Bars" 
+                            onLoad={handleImgLoad}
                             className='cover'
                             initial={{opacity: 0, scale: 0, filter: "blur(5px)"}}
                             animate={{opacity:1, scale: 1, filter: "blur(0px)"}}
@@ -95,7 +99,7 @@ function ElectricBike() {
                             Getting around campus just got easier. Find a nearby e-bike using the app, unlock it, and ride wherever you need to go — fast, easy, and affordable. <br/> Scroll to see how it works or hop on now by picking your start and end points.
                         </motion.p>
                     </div>
-                    <motion.img src={ebike_mono} alt="E-bike" className='w-120 rounded-3xl'
+                    <motion.img src={ebike_mono} onLoad={handleImgLoad} alt="E-bike" className='w-120 rounded-3xl'
                     ref={ref2}
                     initial={{opacity: 0, filter: "blur(50px)"}}
                     animate={isInView2 ? {opacity:1, filter: "blur(0px)"} : {}}
@@ -219,22 +223,14 @@ function ElectricBike() {
                       </motion.div>
                     </div>
                 </div> */}
-
-                
             </div>
-
-            {/* <div className='w-full'>
-                <div className='max-h-[1400px] mx-auto'>
-
-                </div>
-            
-            </div> */}
-
             <Animate />
-
+            <LoaderScreen />
         </div>
       
     </div>
+        )}
+    </>
   )
 }
 
