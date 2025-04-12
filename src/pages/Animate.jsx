@@ -111,7 +111,6 @@ function Animate() {
             </div>
         </motion.div>
         <Hero />
-        <Hero />
     </div>
     
   )

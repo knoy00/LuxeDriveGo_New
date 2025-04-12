@@ -17,7 +17,7 @@ const Navbar = ({signin, signup, help}) => {
             <div >
                 <ul className='flex justify-center items-center space-x-10 text-white font-regular'>
                     <li className='cursor-pointer'>{help}</li>
-                    <li className='cursor-pointer' onClick={() => navigate('/Signin')}>{signin?.label}</li>
+                    <li className='cursor-pointer' onClick={() => navigate('/Signin')}>{signin}</li>
                     <li className='cursor-pointer bg-white text-black py-1 px-2 rounded-lg' onClick={() => navigate('/Signup')}>{signup}</li>
                 </ul>
             </div>

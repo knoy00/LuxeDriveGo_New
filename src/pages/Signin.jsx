@@ -7,11 +7,7 @@ function Signin() {
     const navigate = useNavigate();
   return (
     <div className='w-full h-screen'>
-        <Navbar signin={{
-            label: 'Sign Up', 
-            onClick: () => navigate('/Signup')
-            }}
-        />
+        <Navbar />
         <div className='flex justify-center items-center w-full mt-50'>
             <div className='text-center px-5 flex flex-col w-100'>
                 <h1 className='text-3xl mb-7'>Sign In</h1>

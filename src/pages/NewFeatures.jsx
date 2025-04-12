@@ -29,11 +29,11 @@ function NewFeatures() {
                     </p>
                     <GetStartedBtn />
                 </div>
-                <img src={Women} alt="Man in couch" className='w-120 rounded-4xl'/>
+                <img src={Women} alt="Women using phones" className='w-120 rounded-4xl'/>
             </div>
 
             <div  className='flex justify-center items-center gap-x-30 mb-10'>
-                <img src={DropOff} alt="Man in couch" className='w-120 rounded-4xl'/>
+                <img src={DropOff} alt="Woman with package and a rider" className='w-120 rounded-4xl'/>
                 <div>
                     <h1 className='text-4xl font-semibold mb-10'>LuxeDrop</h1>
                     <p className='text-[18px]'>

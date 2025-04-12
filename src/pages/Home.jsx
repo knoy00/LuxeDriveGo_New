@@ -9,7 +9,7 @@ import GettingAround from './GettingAround'
 function Home() {
   return (
     <div>
-      <Navbar signin={{label: 'Sign in'}} signup={"Sign up"} help={"Help"}/>
+      <Navbar signin={ 'Sign in'} signup={"Sign up"} help={"Help"}/>
       <Hero />
       <GetApp />
       <NewFeatures />

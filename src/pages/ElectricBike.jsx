@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion, useInView, useScroll, useTransform  } from 'framer-motion'
+import { motion, useInView, } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import Animate from './Animate'
 
@@ -91,7 +91,12 @@ function ElectricBike() {
                             Getting around campus just got easier. Find a nearby e-bike using the app, unlock it, and ride wherever you need to go — fast, easy, and affordable. <br/> Scroll to see how it works or hop on now by picking your start and end points.
                         </motion.p>
                     </div>
-                    <img src={Ebike} loading='lazy' alt="Woman on bike" className='w-120 rounded-3xl'/>
+                    <motion.img src={Ebike} loading='lazy' alt="E-bike" className='w-120 rounded-3xl'
+                    ref={ref2}
+                    initial={{opacity: 0, filter: "blur(50px)"}}
+                    animate={isInView2 ? {opacity:1, filter: "blur(0px)"} : {}}
+                    transition={{duration: .5, ease: 'easeInOut'}}
+                    />
                 </div>
 
                 <div className='w-full  py-10'>
@@ -134,7 +139,7 @@ function ElectricBike() {
                     <div className='mt-30'>
                         <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
                         -   <div className='w-80 h-80 contain-content'>
-                                <img src={Hand} loading='lazy' alt="Woman on bike" className='w-full'/>
+                                <img src={Hand} loading='lazy' alt="Phone in hand" className='w-full'/>
                             </div>                            <div>
                                 <h3 className='text-[22px] font-bold text-[#1f1f1f]'>1. Find a Nearby E-Bike</h3>
                                 <p className='text-[18px] font-light text-[#424242] px-6 mt-5 w-160'>
@@ -146,7 +151,7 @@ function ElectricBike() {
                         
                         <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
                             <div className='w-80 h-80 contain-content'>
-                                <img src={Scanning} loading='lazy' alt="Woman on bike" className='w-full'/>
+                                <img src={Scanning} loading='lazy' alt="Man with phone" className='w-full'/>
                             </div>                            <div>
                                 <h3 className='text-[22px] font-bold text-[#1f1f1f]'>2. Unlock With Your Phone</h3>
                                 <p className='text-[18px] font-light text-[#424242] px-6 mt-5 w-160'>
@@ -158,7 +163,7 @@ function ElectricBike() {
                         
                         <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
                             <div className='w-80 h-80 contain-content'>
-                                <img src={Riding} loading='lazy' alt="Woman on bike" className='w-full'/>
+                                <img src={Riding} loading='lazy' alt="Man riding bike" className='w-full'/>
                             </div>                            <div>
                                 <h3 className='text-[22px] font-bold text-[#1f1f1f]'>3. Ride Accross Campus</h3>
                                 <p className='text-[18px] font-light text-[#424242] px-6 mt-5 w-160'>
@@ -170,7 +175,7 @@ function ElectricBike() {
                         
                         <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
                             <div className='w-80 h-80 contain-content'>
-                                <img src={Woman} loading='lazy' alt="Woman on bike" className='w-full'/>
+                                <img src={Woman} loading='lazy' alt="Bike" className='w-full'/>
                             </div>
                             <div>
                                 <h3 className='text-[22px] font-bold text-[#1f1f1f]'>4. Dock When You're Done</h3>
@@ -183,7 +188,7 @@ function ElectricBike() {
                         
                         <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
                             <div className='w-80 h-80 contain-content'>
-                                <img src={Payment} loading='lazy' alt="Woman on bike" className='w-full'/>
+                                <img src={Payment} loading='lazy' alt="Payment" className='w-full'/>
                             </div>                            <div>
                                 <h3 className='text-[22px] font-bold text-[#1f1f1f]'>5. Pay Seamlessly</h3>
                                 <p className='text-[18px] font-light text-[#424242] px-6 mt-5 w-160'>

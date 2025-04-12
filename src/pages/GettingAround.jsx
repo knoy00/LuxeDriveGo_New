@@ -11,7 +11,7 @@ function GettingAround() {
         </p>
         <p className="text-white text-[20px]">Fast, comfy, and hassle-free. Just tap, ride, and relax.</p>
       </div>
-      <img src={Mockup} loading='lazy' alt="" className='w-full mt-10'/>
+      <img src={Mockup} loading='lazy' alt="Hand Holding Phone" className='w-full mt-10'/>
 
     </div>
   )
