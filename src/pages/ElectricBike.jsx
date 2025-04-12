@@ -12,9 +12,11 @@ import Riding from '../assets/images/Riding.jpeg'
 import Payment from '../assets/images/Payment.jpeg'
 import Scanning from '../assets/images/Scanning.png'
 import ebike_mono from '../assets/images/ebike_mono.jpeg'
-import {useRef} from 'react'
+import {useRef, useState} from 'react'
 import { Dock } from 'lucide-react'
 function ElectricBike() {
+
+    const [isLoaded, setIsLoaded] = useState(true);
     
 
 
@@ -55,15 +57,19 @@ function ElectricBike() {
                     >
                         No more waiting, no more stress
                     </motion.p>
-                    <motion.img 
-                        // loading='lazy' 
-                        src={handlebars} 
-                        alt="Bike Handle Bars" 
-                        className='cover'
-                        initial={{opacity: 0, scale: 0, filter: "blur(5px)"}}
-                        animate={{opacity:1, scale: 1, filter: "blur(0px)"}}
-                        transition={{duration: 1, ease: 'easeOut'}}
-                    />
+
+                    <div className='w-full bg-black'>
+                        <motion.img 
+                            // loading='lazy' 
+                            src={handlebars} 
+                            alt="Bike Handle Bars" 
+                            className='cover'
+                            initial={{opacity: 0, scale: 0, filter: "blur(5px)"}}
+                            animate={{opacity:1, scale: 1, filter: "blur(0px)"}}
+                            transition={{duration: 1, ease: 'easeOut'}}
+                        />
+                    </div>
+                    
                 </div>
 
                 <div className='w-full flex justify-center items-center space-x-10 mt-20 text-[#444] py-10'>
