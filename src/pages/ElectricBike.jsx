@@ -22,7 +22,7 @@ function ElectricBike() {
         setIsLoaded((prev) => prev + 1)
     }
     const allImagesLoaded = isLoaded === imagesToLoad;
-
+    console.log("allImagesLoaded", allImagesLoaded)
 
     const ref2 = useRef(null);
     const ref3 = useRef(null);
@@ -31,83 +31,85 @@ function ElectricBike() {
 
   return (
     <>
+        <img src={handlebars} alt="Handlebars" onLoad={handleImgLoad} className='hidden'/>
+        <img src={Ebike} alt="Ebike" onLoad={handleImgLoad} className='hidden'/>
         {!allImagesLoaded && <LoaderScreen />}
+        
         {allImagesLoaded && (
-        <div>
-        <ScrollToTop />
-        <Navbar />
-        <div className='w-full font-helvetica'>
-            <div className='max-w-[1400px] mx-auto mt-20 '>
-                <div className='text-center  bg-[#efefef] pt-10 px-20 rounded-4xl'>
-                    <motion.h1 className='text-[50px] w-full max-w-2xl mx-auto font-semibold text-[#424242] leading-[4rem] mb-3'
-                    initial={{opacity: 0, y: 200, filter: "blur(30px)"}}
-                    animate={{opacity:1, y: 0, filter: "blur(0px)"}}
-                    transition={{duration: .6, ease: 'easeOut'}}
-                    >
-                        Our Electric Bike Program for campuses is here
-                    </motion.h1>
-                    <motion.p className='text-[22px] text-[#424242] mb-2 '
-                    initial={{opacity: 0, y: 200, filter: "blur(30px)"}}
-                    animate={{opacity:1, y: 0, filter: "blur(0px)"}}
-                    transition={{duration: .6, ease: 'easeOut'}}
-                    >
-                        Move around campus with ease and reduce your carbon footprint
-                    </motion.p>
-                    <motion.p className='text-[20px] text-[#424242] mb-10'
-                    initial={{opacity: 0, y: 200, filter: "blur(50px)"}}
-                    animate={{opacity:1, y: 0, filter: "blur(0px)"}}
-                    transition={{duration: .8, ease: 'easeOut'}}
-                    >
-                        No more waiting, no more stress
-                    </motion.p>
+            <div>
+                <ScrollToTop />
+                <Navbar />
+                <div className='w-full font-helvetica'>
+                    <div className='max-w-[1400px] mx-auto mt-20 '>
+                        <div className='text-center  bg-[#efefef] pt-10 px-20 rounded-4xl'>
+                            <motion.h1 className='text-[50px] w-full max-w-2xl mx-auto font-semibold text-[#424242] leading-[4rem] mb-3'
+                            initial={{opacity: 0, y: 200, filter: "blur(30px)"}}
+                            animate={{opacity:1, y: 0, filter: "blur(0px)"}}
+                            transition={{duration: .6, ease: 'easeOut'}}
+                            >
+                            Our Electric Bike Program for campuses is here
+                            </motion.h1>
+                            <motion.p className='text-[22px] text-[#424242] mb-2 '
+                            initial={{opacity: 0, y: 200, filter: "blur(30px)"}}
+                            animate={{opacity:1, y: 0, filter: "blur(0px)"}}
+                            transition={{duration: .6, ease: 'easeOut'}}
+                            >
+                                Move around campus with ease and reduce your carbon footprint
+                            </motion.p>
+                            <motion.p className='text-[20px] text-[#424242] mb-10'
+                            initial={{opacity: 0, y: 200, filter: "blur(50px)"}}
+                            animate={{opacity:1, y: 0, filter: "blur(0px)"}}
+                            transition={{duration: .8, ease: 'easeOut'}}
+                            >
+                                No more waiting, no more stress
+                            </motion.p>
 
-                    <div className='w-full '>
-                        <motion.img 
-                            // loading='lazy' 
-                            src={handlebars} 
-                            alt="Bike Handle Bars" 
-                            onLoad={handleImgLoad}
-                            className='cover'
-                            initial={{opacity: 0, scale: 0, filter: "blur(5px)"}}
-                            animate={{opacity:1, scale: 1, filter: "blur(0px)"}}
-                            transition={{duration: 1, ease: 'easeOut'}}
-                        />
-                    </div>
+                            <div className='w-full '>
+                                <motion.img 
+                                    // loading='lazy' 
+                                    src={handlebars} 
+                                    alt="Bike Handle Bars" 
+                                    className='cover'
+                                    initial={{opacity: 0, scale: 0, filter: "blur(5px)"}}
+                                    animate={{opacity:1, scale: 1, filter: "blur(0px)"}}
+                                    transition={{duration: 1, ease: 'easeOut'}}
+                                />
+                            </div>
                     
-                </div>
+                        </div>
 
-                <div className='w-full flex justify-center items-center space-x-10 mt-20 text-[#444] py-10'>
-                    <div className='w-full'>
-                        <motion.h1 
+                        <div className='w-full flex justify-center items-center space-x-10 mt-20 text-[#444] py-10'>
+                        <div className='w-full'>
+                            <motion.h1 
+                            ref={ref2}
+                            className='text-5xl font-semibold mb-10'
+                            initial={{opacity: 0, y: 200, filter: "blur(50px)"} }
+                            animate={isInView2 ? {opacity: 1, y: 0, filter: "blur(0px)"}: {opacity: 0, y: 200,}}
+                            transition={{duration: .8, ease: 'easeInOut'}}
+                            >
+                                How it works
+                            </motion.h1>
+            
+                            <motion.p
+                             className='text-xl font-light text-[#424242]'
+                             ref={ref2}
+                             initial={{opacity: 0, y: 200, filter: "blur(50px)"} }
+                             animate={isInView2 ? {opacity: 1, y: 0, filter: "blur(0px)"}: {opacity: 0, y: 200, }}
+                             transition={{duration: .8, ease: 'easeInOut'}}
+                            >
+                            
+                                Getting around campus just got easier. Find a nearby e-bike using the app, unlock it, and ride wherever you need to go — fast, easy, and affordable. <br/> Scroll to see how it works or hop on now by picking your start and end points.
+                            </motion.p>
+                        </div>
+                        <motion.img src={Ebike} alt="E-bike" className='w-120 rounded-3xl'
                         ref={ref2}
-                        className='text-5xl font-semibold mb-10'
-                        initial={{opacity: 0, y: 200, filter: "blur(50px)"} }
-                        animate={isInView2 ? {opacity: 1, y: 0, filter: "blur(0px)"}: {opacity: 0, y: 200,}}
-                        transition={{duration: .8, ease: 'easeInOut'}}
-                        >
-                            How it works
-                        </motion.h1>
+                        initial={{opacity: 0, filter: "blur(50px)"}}
+                        animate={isInView2 ? {opacity:1, filter: "blur(0px)"} : {}}
+                        transition={{duration: .5, ease: 'easeInOut'}}
+                        />
+                        </div>
 
-                        <motion.p
-                         className='text-xl font-light text-[#424242]'
-                         ref={ref2}
-                         initial={{opacity: 0, y: 200, filter: "blur(50px)"} }
-                         animate={isInView2 ? {opacity: 1, y: 0, filter: "blur(0px)"}: {opacity: 0, y: 200, }}
-                         transition={{duration: .8, ease: 'easeInOut'}}
-                        >
-                        
-                            Getting around campus just got easier. Find a nearby e-bike using the app, unlock it, and ride wherever you need to go — fast, easy, and affordable. <br/> Scroll to see how it works or hop on now by picking your start and end points.
-                        </motion.p>
-                    </div>
-                    <motion.img src={Ebike} onLoad={handleImgLoad} alt="E-bike" className='w-120 rounded-3xl'
-                    ref={ref2}
-                    initial={{opacity: 0, filter: "blur(50px)"}}
-                    animate={isInView2 ? {opacity:1, filter: "blur(0px)"} : {}}
-                    transition={{duration: .5, ease: 'easeInOut'}}
-                    />
-                </div>
-
-                <div className='w-full  py-10'>
+                        <div className='w-full  py-10'>
                     <div className='mt-10 '>
                         <motion.h1 className='text-[30px] underline font-regular text-[#686868]'
                         initial={{opacity: 0, filter: "blur(50px)"} }
@@ -207,28 +209,14 @@ function ElectricBike() {
                         </div>
                         
                     </div>
+                        </div>
+
+                
+                    </div>
+                    <Animate />
+                    <LoaderScreen />
                 </div>
-
-                {/* <div className="h-[200vh] bg-gray-100">
-                    <div className="h-screen flex items-center justify-center">
-                      <p>Scroll down to see the effect</p>
-                    </div>
-
-                    <div ref={ref3} className="h-[100vh] flex items-center justify-center">
-                      <motion.div
-                        style={{ scale }}
-                        className="w-64 h-64 bg-blue-500 rounded-xl flex items-center justify-center shadow-xl"
-                      >
-                        <p className="text-white text-xl font-bold">Zooming E-Bike</p>
-                      </motion.div>
-                    </div>
-                </div> */}
             </div>
-            <Animate />
-            <LoaderScreen />
-        </div>
-      
-    </div>
         )}
     </>
   )
