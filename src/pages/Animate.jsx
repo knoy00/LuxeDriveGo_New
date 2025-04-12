@@ -26,6 +26,7 @@ function Animate() {
     })
     const scale3 = useTransform(scrollYProgress3, [0, 1], [1, 0.8])
     const borderRadius = useTransform(scrollYProgress3, [0, 1], ['0px', '150px'])
+    const blur = useTransform(scrollYProgress3, [0, 1], ['0px', '50px'])
 
 
   return (
@@ -88,7 +89,7 @@ function Animate() {
                 </div>
             </div>
         </div>
-        <motion.div className=' bg-black w-full py-10' ref={ref3} style={{scale: scale3, borderRadius}}>
+        <motion.div className=' bg-black w-full py-10' ref={ref3} style={{scale: scale3, borderRadius, blur}}>
             <div className='max-w-[1400px] mx-auto bg-[#000] py-10 rounded-[70px]'>
                 <div className='w-full text-center '>
                     <h1 className='text-white text-[40px] mb-5'>
@@ -103,7 +104,10 @@ function Animate() {
                     <img src={Ebike} alt="Electric Bike" className='w-170'/>
                 </div>
 
-                <button></button>
+                <div className='w-full flex justify-center items-center'>
+                    <button className='bg-white px-13 py-6 mt-10 font-regular hover:bg-[#ccc] rounded-[50px] cursor-pointer text-[20px]'>Learn More</button>
+
+                </div>
             </div>
         </motion.div>
         <Hero />
