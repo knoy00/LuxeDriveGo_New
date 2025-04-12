@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 import Animate from './Animate'
 import ScrollToTop from '../components/ScrollToTop'
 
-import handlebars from '../assets/images/BikeBars.webp'
+import handlebars from '../assets/images/BikeBars.png'
 import Woman from '../assets/images/woman_ebike.jpeg'
 import Ebike from '../assets/images/ebike.png'
 import Hand from '../assets/images/Hand.png'
@@ -19,11 +19,9 @@ function ElectricBike() {
     
 
 
-    const ref1 = useRef(null);
     const ref2 = useRef(null);
     const ref3 = useRef(null);
 
-    const isInView1 = useInView(ref1, { once: true });
     const isInView2 = useInView(ref2, { once: true });
     const isInView3 = useInView(ref3, { once: true });
     
@@ -69,8 +67,8 @@ function ElectricBike() {
                     />
                 </div>
 
-                <div className='w-full flex justify-center items-center space-x-10 mt-20 text-[#444]'>
-                    <div className=''>
+                <div className='w-full flex justify-center items-center space-x-10 mt-20 text-[#444] py-10'>
+                    <div className='w-full'>
                         <motion.h1 
                         ref={ref2}
                         className='text-5xl font-semibold mb-10'
