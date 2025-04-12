@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import GetApp from './GetApp'
 import NewFeatures from './NewFeatures'
-import ElectricBike from './ElectricBike'
+import IntroBike from './IntroBike'
 import GettingAround from './GettingAround'
 
 function Home() {
@@ -13,7 +13,7 @@ function Home() {
       <Hero />
       <GetApp />
       <NewFeatures />
-      <ElectricBike />
+      <IntroBike />
       <GettingAround />
     </div>
   )
