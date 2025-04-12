@@ -1,6 +1,7 @@
 import React from 'react'
-import { motion, useInView } from 'framer-motion'
+import { motion, useInView, useScroll, useTransform  } from 'framer-motion'
 import Navbar from '../components/Navbar'
+import Animate from './Animate'
 
 
 import handlebars from '../assets/images/BikeBars.webp'
@@ -14,6 +15,7 @@ import Docking from '../assets/images/Docking.jpeg'
 
 
 
+
 import {useRef} from 'react'
 import { Dock } from 'lucide-react'
 function ElectricBike() {
@@ -23,7 +25,20 @@ function ElectricBike() {
 
     const isInView1 = useInView(ref1, { once: true });
     const isInView2 = useInView(ref2, { once: true });
-    const isInView3 = useInView(ref3, { once: true });
+    
+    const { scrollYProgress } = useScroll({
+        target: ref3,
+        offset: ["start center", "end start"], // From bottom entering to top leaving
+      });
+    
+      // Map scroll progress to a scale value
+      const scale = useTransform(scrollYProgress, [0, 1], [0.5, 4.5]);
+
+    // const [newRef, newInView] = useInView({
+        
+    // })
+
+
   return (
     <div>
         <Navbar />
@@ -105,8 +120,9 @@ function ElectricBike() {
                     
                     <div className='mt-30'>
                         <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
-                            <img src={Hand} loading='lazy' alt="Woman on bike" className='w-80 rounded-1xl'/>
-                            <div>
+                        -   <div className='w-80 h-80 contain-content'>
+                                <img src={Hand} loading='lazy' alt="Woman on bike" className='w-full'/>
+                            </div>                            <div>
                                 <h3 className='text-[22px] font-bold text-[#1f1f1f]'>1. Find a Nearby E-Bike</h3>
                                 <p className='text-[18px] font-light text-[#424242] px-6 mt-5 w-160'>
                                     Use the app to locate the closest available electric bike on your campus. Docking stations are placed at key spots for easy access.
@@ -116,8 +132,9 @@ function ElectricBike() {
                         </div>
                         
                         <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
-                            <img src={Scanning} loading='lazy' alt="Woman on bike" className='w-80 rounded-1xl'/>
-                            <div>
+                            <div className='w-80 h-80 contain-content'>
+                                <img src={Scanning} loading='lazy' alt="Woman on bike" className='w-full'/>
+                            </div>                            <div>
                                 <h3 className='text-[22px] font-bold text-[#1f1f1f]'>2. Unlock With Your Phone</h3>
                                 <p className='text-[18px] font-light text-[#424242] px-6 mt-5 w-160'>
                                     Once you’ve selected a bike, scan the QR code using the app to unlock it instantly. No keys, no hassle — just tap and ride.
@@ -127,8 +144,9 @@ function ElectricBike() {
                         </div>
                         
                         <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
-                            <img src={Riding} loading='lazy' alt="Woman on bike" className='w-80 rounded-1xl'/>
-                            <div>
+                            <div className='w-80 h-80 contain-content'>
+                                <img src={Riding} loading='lazy' alt="Woman on bike" className='w-full'/>
+                            </div>                            <div>
                                 <h3 className='text-[22px] font-bold text-[#1f1f1f]'>3. Ride Accross Campus</h3>
                                 <p className='text-[18px] font-light text-[#424242] px-6 mt-5 w-160'>
                                     Cruise to your destination comfortably and quickly. Whether you're heading to class, the library, or just exploring — the ride is yours.
@@ -138,7 +156,9 @@ function ElectricBike() {
                         </div>
                         
                         <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
-                            <img src={Woman} loading='lazy' alt="Woman on bike" className='w-80 rounded-1xl'/>
+                            <div className='w-80 h-80 contain-content'>
+                                <img src={Woman} loading='lazy' alt="Woman on bike" className='w-full'/>
+                            </div>
                             <div>
                                 <h3 className='text-[22px] font-bold text-[#1f1f1f]'>4. Dock When You're Done</h3>
                                 <p className='text-[18px] font-light text-[#424242] px-6 mt-5 w-160'>
@@ -149,8 +169,9 @@ function ElectricBike() {
                         </div>
                         
                         <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
-                            <img src={Payment} loading='lazy' alt="Woman on bike" className='w-80 rounded-1xl'/>
-                            <div>
+                            <div className='w-80 h-80 contain-content'>
+                                <img src={Payment} loading='lazy' alt="Woman on bike" className='w-full'/>
+                            </div>                            <div>
                                 <h3 className='text-[22px] font-bold text-[#1f1f1f]'>5. Pay Seamlessly</h3>
                                 <p className='text-[18px] font-light text-[#424242] px-6 mt-5 w-160'>
                                     Use the app to locate the closest available electric bike on your campus. Docking stations are placed at key spots for easy access.
@@ -161,7 +182,33 @@ function ElectricBike() {
                         
                     </div>
                 </div>
+
+                {/* <div className="h-[200vh] bg-gray-100">
+                    <div className="h-screen flex items-center justify-center">
+                      <p>Scroll down to see the effect</p>
+                    </div>
+
+                    <div ref={ref3} className="h-[100vh] flex items-center justify-center">
+                      <motion.div
+                        style={{ scale }}
+                        className="w-64 h-64 bg-blue-500 rounded-xl flex items-center justify-center shadow-xl"
+                      >
+                        <p className="text-white text-xl font-bold">Zooming E-Bike</p>
+                      </motion.div>
+                    </div>
+                </div> */}
+
+                
             </div>
+
+            {/* <div className='w-full'>
+                <div className='max-h-[1400px] mx-auto'>
+
+                </div>
+            
+            </div> */}
+
+            <Animate />
 
         </div>
       
