@@ -2,9 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import googleIcon from '../assets/icons/google-small.png';
 import appleIcon from '../assets/icons/apple.png'
-import { useNavigate } from 'react-router-dom';
 function Signin() {
-    const navigate = useNavigate();
   return (
     <div className='w-full h-screen'>
         <Navbar />
