@@ -51,7 +51,7 @@ function ElectricBike() {
                     />
                 </div>
 
-                <div className='w-full flex justify-center items-center space-x-10 mt-20'>
+                <div className='w-full flex justify-center items-center space-x-10 mt-20 text-[#444]'>
                     <div className=''>
                         <motion.h1 
                         ref={ref1}
@@ -75,6 +75,29 @@ function ElectricBike() {
                         </motion.p>
                     </div>
                     <img src={Ebike} loading='lazy' alt="Woman on bike" className='w-120 rounded-3xl'/>
+                </div>
+
+                <div className='w-full mt-10 py-10'>
+                    <h1 className='text-[30px] underline font-regular text-[#686868]'>Getting Started</h1>
+                    <p className='text-[20px] font-light text-[#8e8e8e] mt-5'>
+                        Learn how easy it is to find and unlock an electric bike on campus using our app. <br /> Whether you're heading to class or grabbing lunch, getting a ride is just a few taps away.
+                    </p>
+
+                    <div className='mt-10 '>
+                        <h1 className='text-[30px] underline font-regular text-[#686868]'>Register as a Student</h1>
+                        <p className='text-[20px] font-light text-[#8e8e8e] mt-5'>
+                            Before your first ride, you’ll need to sign up using your campus student ID. This ensures only verified students have access to the bikes and helps us keep the programme secure and student-friendly.
+                        </p>
+                    </div>
+
+                    
+
+                    <div>
+                        <img src={Woman} loading='lazy' alt="Woman on bike" className='w-120 rounded-3xl mt-10'/>
+                        <div>
+                            <h3>1. Getting Started</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
 
