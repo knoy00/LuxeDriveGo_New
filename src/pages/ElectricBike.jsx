@@ -1,10 +1,18 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import handlebars from '../assets/images/BikeBars.webp'
 import Woman from '../assets/images/woman_ebike.jpeg'
 import Ebike from '../assets/images/ebike.png'
+import {useRef} from 'react'
 function ElectricBike() {
+    const ref1 = useRef(null);
+    const ref2 = useRef(null);
+    const ref3 = useRef(null);
+
+    const isInView1 = useInView(ref1, { once: true });
+    const isInView2 = useInView(ref2, { once: true });
+    const isInView3 = useInView(ref3, { once: true });
   return (
     <div>
         <Navbar />
@@ -45,16 +53,31 @@ function ElectricBike() {
 
                 <div className='w-full flex justify-center items-center space-x-10 mt-20'>
                     <div className=''>
-                        <h1 className='text-5xl font-semibold mb-10'>How it works</h1>
-                        <p className='text-xl font-light text-[#424242]'>
+                        <motion.h1 
+                        ref={ref1}
+                        className='text-5xl font-semibold mb-10'
+                        initial={{opacity: 0, y: 200}}
+                        animate={isInView1 ? {opacity: 1, y: 0}: {opacity: 0, y: 200}}
+                        transition={{duration: 1.5, ease: 'easeInOut'}}
+                        >
+                            How it works
+                        </motion.h1>
+
+                        <motion.p
+                         className='text-xl font-light text-[#424242]'
+                         ref={ref2}
+                         initial={{opacity: 0, y: 200}}
+                         animate={isInView2 ? {opacity: 1, y: 0}: {opacity: 0, y: 200}}
+                         transition={{duration: 1.5, ease: 'easeInOut'}}
+                        >
+                        
                             Getting around campus just got easier. Find a nearby e-bike using the app, unlock it, and ride wherever you need to go — fast, easy, and affordable. <br/> Scroll to see how it works or hop on now by picking your start and end points.
-                        </p>
+                        </motion.p>
                     </div>
-                    <img src={Woman} loading='lazy' alt="" className='w-120 rounded-3xl'/>
+                    <img src={Ebike} loading='lazy' alt="Woman on bike" className='w-120 rounded-3xl'/>
                 </div>
             </div>
 
-            
         </div>
       
     </div>
