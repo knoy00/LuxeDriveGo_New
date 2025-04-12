@@ -11,8 +11,7 @@ import Hand from '../assets/images/Hand.png'
 import Riding from '../assets/images/Riding.jpeg'
 import Payment from '../assets/images/Payment.jpeg'
 import Scanning from '../assets/images/Scanning.png'
-import Docking from '../assets/images/Docking.jpeg'
-
+import ebike_mono from '../assets/images/ebike_mono.jpeg'
 import {useRef} from 'react'
 import { Dock } from 'lucide-react'
 function ElectricBike() {
@@ -90,7 +89,7 @@ function ElectricBike() {
                             Getting around campus just got easier. Find a nearby e-bike using the app, unlock it, and ride wherever you need to go — fast, easy, and affordable. <br/> Scroll to see how it works or hop on now by picking your start and end points.
                         </motion.p>
                     </div>
-                    <motion.img src={Ebike} alt="E-bike" className='w-120 rounded-3xl'
+                    <motion.img src={ebike_mono} alt="E-bike" className='w-120 rounded-3xl'
                     ref={ref2}
                     initial={{opacity: 0, filter: "blur(50px)"}}
                     animate={isInView2 ? {opacity:1, filter: "blur(0px)"} : {}}
