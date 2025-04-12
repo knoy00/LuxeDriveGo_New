@@ -3,7 +3,6 @@ import { motion, useInView, } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import Animate from './Animate'
 import ScrollToTop from '../components/ScrollToTop'
-import { useLocation } from 'react-router-dom'
 
 import handlebars from '../assets/images/BikeBars.webp'
 import Woman from '../assets/images/woman_ebike.jpeg'
@@ -73,10 +72,10 @@ function ElectricBike() {
                 <div className='w-full flex justify-center items-center space-x-10 mt-20 text-[#444]'>
                     <div className=''>
                         <motion.h1 
-                        ref={ref1}
+                        ref={ref2}
                         className='text-5xl font-semibold mb-10'
                         initial={{opacity: 0, y: 200, filter: "blur(50px)"} }
-                        animate={isInView1 ? {opacity: 1, y: 0, filter: "blur(0px)"}: {opacity: 0, y: 200,}}
+                        animate={isInView2 ? {opacity: 1, y: 0, filter: "blur(0px)"}: {opacity: 0, y: 200,}}
                         transition={{duration: .8, ease: 'easeInOut'}}
                         >
                             How it works
