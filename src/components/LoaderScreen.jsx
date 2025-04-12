@@ -6,7 +6,7 @@ function LoaderScreen() {
     <div className='w-full h-screen flex justify-center items-center bg-black'>
       <motion.img 
       src={logo} 
-      alt="" 
+      alt="Logo" 
       initial={{opacity: 0, filter: 'blur(70px)'}}
       animate={{opacity: 1, filter: 'blur(0px)'}}
       transition={{duration: .8, ease: 'easeInOut'}}
