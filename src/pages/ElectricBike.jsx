@@ -2,7 +2,8 @@ import React from 'react'
 import { motion, useInView, } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import Animate from './Animate'
-
+import ScrollToTop from '../components/ScrollToTop'
+import { useLocation } from 'react-router-dom'
 
 import handlebars from '../assets/images/BikeBars.webp'
 import Woman from '../assets/images/woman_ebike.jpeg'
@@ -13,12 +14,12 @@ import Payment from '../assets/images/Payment.jpeg'
 import Scanning from '../assets/images/Scanning.png'
 import Docking from '../assets/images/Docking.jpeg'
 
-
-
-
 import {useRef} from 'react'
 import { Dock } from 'lucide-react'
 function ElectricBike() {
+    
+
+
     const ref1 = useRef(null);
     const ref2 = useRef(null);
     const ref3 = useRef(null);
@@ -32,6 +33,7 @@ function ElectricBike() {
 
   return (
     <div>
+        <ScrollToTop />
         <Navbar />
         <div className='w-full font-helvetica'>
             <div className='max-w-[1400px] mx-auto mt-20 '>
@@ -58,7 +60,7 @@ function ElectricBike() {
                         No more waiting, no more stress
                     </motion.p>
                     <motion.img 
-                        loading='lazy' 
+                        // loading='lazy' 
                         src={handlebars} 
                         alt="Bike Handle Bars" 
                         className='cover'
@@ -91,7 +93,7 @@ function ElectricBike() {
                             Getting around campus just got easier. Find a nearby e-bike using the app, unlock it, and ride wherever you need to go — fast, easy, and affordable. <br/> Scroll to see how it works or hop on now by picking your start and end points.
                         </motion.p>
                     </div>
-                    <motion.img src={Ebike} loading='lazy' alt="E-bike" className='w-120 rounded-3xl'
+                    <motion.img src={Ebike} alt="E-bike" className='w-120 rounded-3xl'
                     ref={ref2}
                     initial={{opacity: 0, filter: "blur(50px)"}}
                     animate={isInView2 ? {opacity:1, filter: "blur(0px)"} : {}}
