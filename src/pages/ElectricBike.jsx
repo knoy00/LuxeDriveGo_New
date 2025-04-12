@@ -1,10 +1,21 @@
 import React from 'react'
 import { motion, useInView } from 'framer-motion'
 import Navbar from '../components/Navbar'
+
+
 import handlebars from '../assets/images/BikeBars.webp'
 import Woman from '../assets/images/woman_ebike.jpeg'
 import Ebike from '../assets/images/ebike.png'
+import Hand from '../assets/images/Hand.png'
+import Riding from '../assets/images/Riding.jpeg'
+import Payment from '../assets/images/Payment.jpeg'
+import Scanning from '../assets/images/Scanning.png'
+import Docking from '../assets/images/Docking.jpeg'
+
+
+
 import {useRef} from 'react'
+import { Dock } from 'lucide-react'
 function ElectricBike() {
     const ref1 = useRef(null);
     const ref2 = useRef(null);
@@ -77,12 +88,7 @@ function ElectricBike() {
                     <img src={Ebike} loading='lazy' alt="Woman on bike" className='w-120 rounded-3xl'/>
                 </div>
 
-                <div className='w-full mt-10 py-10'>
-                    <h1 className='text-[30px] underline font-regular text-[#686868]'>Getting Started</h1>
-                    <p className='text-[20px] font-light text-[#8e8e8e] mt-5'>
-                        Learn how easy it is to find and unlock an electric bike on campus using our app. <br /> Whether you're heading to class or grabbing lunch, getting a ride is just a few taps away.
-                    </p>
-
+                <div className='w-full  py-10'>
                     <div className='mt-10 '>
                         <h1 className='text-[30px] underline font-regular text-[#686868]'>Register as a Student</h1>
                         <p className='text-[20px] font-light text-[#8e8e8e] mt-5'>
@@ -90,13 +96,69 @@ function ElectricBike() {
                         </p>
                     </div>
 
-                    
+                    <h1 className='text-[30px] font-regular text-[#686868] mt-10' >Getting Started</h1>
+                    <p className='text-[20px] font-light text-[#8e8e8e] mt-2'>
+                        Learn how easy it is to find and unlock an electric bike on campus using our app. <br /> Whether you're heading to class or grabbing lunch, getting a ride is just a few taps away.
+                    </p>
 
-                    <div>
-                        <img src={Woman} loading='lazy' alt="Woman on bike" className='w-120 rounded-3xl mt-10'/>
-                        <div>
-                            <h3>1. Getting Started</h3>
+
+                    
+                    <div className='mt-30'>
+                        <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
+                            <img src={Hand} loading='lazy' alt="Woman on bike" className='w-80 rounded-1xl'/>
+                            <div>
+                                <h3 className='text-[22px] font-bold text-[#1f1f1f]'>1. Find a Nearby E-Bike</h3>
+                                <p className='text-[18px] font-light text-[#424242] px-6 mt-5 w-160'>
+                                    Use the app to locate the closest available electric bike on your campus. Docking stations are placed at key spots for easy access.
+
+                                </p>
+                            </div>
                         </div>
+                        
+                        <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
+                            <img src={Scanning} loading='lazy' alt="Woman on bike" className='w-80 rounded-1xl'/>
+                            <div>
+                                <h3 className='text-[22px] font-bold text-[#1f1f1f]'>2. Unlock With Your Phone</h3>
+                                <p className='text-[18px] font-light text-[#424242] px-6 mt-5 w-160'>
+                                    Once you’ve selected a bike, scan the QR code using the app to unlock it instantly. No keys, no hassle — just tap and ride.
+
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
+                            <img src={Riding} loading='lazy' alt="Woman on bike" className='w-80 rounded-1xl'/>
+                            <div>
+                                <h3 className='text-[22px] font-bold text-[#1f1f1f]'>3. Ride Accross Campus</h3>
+                                <p className='text-[18px] font-light text-[#424242] px-6 mt-5 w-160'>
+                                    Cruise to your destination comfortably and quickly. Whether you're heading to class, the library, or just exploring — the ride is yours.
+
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
+                            <img src={Woman} loading='lazy' alt="Woman on bike" className='w-80 rounded-1xl'/>
+                            <div>
+                                <h3 className='text-[22px] font-bold text-[#1f1f1f]'>4. Dock When You're Done</h3>
+                                <p className='text-[18px] font-light text-[#424242] px-6 mt-5 w-160'>
+                                    Return the e-bike to any official docking station on campus. Lock it securely to end your trip and stop the timer.
+
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
+                            <img src={Payment} loading='lazy' alt="Woman on bike" className='w-80 rounded-1xl'/>
+                            <div>
+                                <h3 className='text-[22px] font-bold text-[#1f1f1f]'>5. Pay Seamlessly</h3>
+                                <p className='text-[18px] font-light text-[#424242] px-6 mt-5 w-160'>
+                                    Use the app to locate the closest available electric bike on your campus. Docking stations are placed at key spots for easy access.
+
+                                </p>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
