@@ -7,7 +7,7 @@ const Navbar = ({signin, signup, help}) => {
     const navigate = useNavigate();
   return (
     <div className=' bg-black w-full font-helvetica'>
-      <div className='max-w-[1400px] mx-auto px-3 py-4'>
+      <div className='max-w-[1400px] mx-auto px-3 py-8'>
         <div className='flex justify-between items-center'>
             <div className='text-white text-2xl cursor-pointer'>
                 <Link to='/'>
@@ -19,7 +19,6 @@ const Navbar = ({signin, signup, help}) => {
                     <li className='cursor-pointer'>{help}</li>
                     <li className='cursor-pointer' onClick={() => navigate('/Signin')}>{signin?.label}</li>
                     <li className='cursor-pointer bg-white text-black py-1 px-2 rounded-lg' onClick={() => navigate('/Signup')}>{signup}</li>
-                    {/* <li></li> */}
                 </ul>
             </div>
         </div>
