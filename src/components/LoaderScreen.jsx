@@ -3,7 +3,7 @@ import logo from '../assets/icons/LuxeDrive_white.png'
 import { motion } from 'framer-motion'
 function LoaderScreen() {
   return (
-    <div className='relative w-full h-screen flex justify-center items-center bg-black'>
+    <div className=' w-full h-screen flex justify-center items-center bg-black'>
       <motion.img 
       src={logo} 
       alt="Logo" 
