@@ -82,24 +82,41 @@ function AvailableCampus() {
     const [isNodeOpen, setIsNodeOpen] = useState(false)
   return (
     <div className='relative flex justify-center items-center w-full h-screen overflow-hidden font-helvetica'>
-        <div>
-            <motion.div
-            onClick={() => setIsNodeOpen(true)}
-            className='w-30 h-30 rounded-[60px] bg-black cursor-pointer flex justify-center items-center'
+        <motion.div className='bg-white absolute rounded-full p-2 flex justify-center items-center'
+        animate={{
+            scale: [.5, 2, .5],
+            opacity: [.5, 1, .5],
+            filter: ["Blur(10px)", "Blur(20px)", "Blur(10px)"]
+            
+        }}
+        transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: 'easeInOut'
+        }}
+        >
+            <div className='rounded-full bg-black p-4'>
+
+            </div>
+            
+        </motion.div>
+
+        <motion.div
+            
+            className='w-20 h-20 rounded-[60px] bg-black flex justify-center items-center relative'
             initial={{scale: 1}}
             animate={{scale: isNodeOpen ? 60 : 1}}
             transition={{duration: 1, ease: 'easeInOut'}}
             >
-                <div className='w-10 h-10 rounded-[60px] bg-white'></div>
+                <div className='w-10 h-10 rounded-[60px] bg-white' onClick={() => setIsNodeOpen(true)}></div>
 
-            </motion.div>
-        </div>
+        </motion.div>
 
         <AnimatePresence>
             {isNodeOpen && (
                 
                 <motion.div
-                className='absolute top-0   z-30 py-20 px-20 max-w-[1400px] w-full h-screen'
+                className='absolute top-0 z-30 py-20 px-20 max-w-[1600px] w-full h-screen'
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 exit={{opacity: 0}}
@@ -109,7 +126,7 @@ function AvailableCampus() {
                         <h1 className='text-black text-[40px] text-center'>Find Your Docking Station</h1>
                     </div>
 
-                    <div className='absolute top-[10%] right-0 cursor-pointer w-10 h-10 bg-black rounded-4xl flex justify-center items-center' onClick={() => setIsNodeOpen(false)}>
+                    <div className='absolute top-[10%] right-10 cursor-pointer w-10 h-10 bg-black rounded-4xl flex justify-center items-center' onClick={() => setIsNodeOpen(false)}>
                         <X color='white'/>
                     </div>
 

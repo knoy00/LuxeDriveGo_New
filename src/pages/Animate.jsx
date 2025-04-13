@@ -27,7 +27,7 @@ function Animate() {
 
 
   return (
-    <div className='relative'>
+    <div className='relative snap-y snap-mandatory'>
         <div className='absolute left-[20%] text-center'>
             <h1 className='text-5xl font-semibold mb-10'>What Our E-bike Offers</h1>
 
@@ -35,7 +35,7 @@ function Animate() {
                 From getting to class on time to cruising around campus with ease, our e-bikes are built to make student life simpler, faster, and way more fun. <br /> Check out all the cool features that make riding with us a no-brainer.
             </p>
         </div>
-        <div ref={ref} className='w-full h-[160vh] flex justify-center items-center overflow-hidden font-helvetica'>
+        <div ref={ref} className='w-full h-[160vh] flex justify-center items-center overflow-hidden font-helvetica snap-start'>
             
             <div className=' flex flex-col space-y-20 w-[500px]'>
                 <div className='border-b border-[#ddd] border-r rounded-br-[140px] pr-5 pb-5  h-[500px] flex justify-center items-center text-center'>
@@ -111,7 +111,7 @@ function Animate() {
                 </div>
             </div>
         </motion.div>
-        <Hero />
+        {/* <Hero /> */}
     </div>
     
   )
