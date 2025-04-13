@@ -23,7 +23,7 @@ const dockingpoints = [
         name: "Birchwood University",
         address: "Birchwood, 6th St, San Francisco, CA 94103",
         availableTime: "7:00AM - 9:00PM",
-        dockingpoint: {
+        dockingLocation: {
             one: "Balmine Library",
             two: "Balmine Library",
             three: "Balmine Library",
@@ -34,24 +34,24 @@ const dockingpoints = [
     },
     {
         id: 3,
-        name: "Birchwood University",
-        address: "Birchwood, 6th St, San Francisco, CA 94103",
+        name: "Central University",
+        address: "Baroson, 8th Ave, Maple, CA 94103",
         availableTime: "7:00AM - 9:00PM",
-        dockingpoint: {
+        dockingLocation: {
             one: "Balmine Library",
-            two: "Balmine Library",
-            three: "Balmine Library",
-            four: "Balmine Library",
-            five: "Balmine Library"
+            two: "Hallman Hall",
+            three: "School Cafetaria",
+            four: "Pluto Block",
+            five: "Administrative Building"
         },
 
     },
     {
         id: 4,
-        name: "Birchwood University",
-        address: "Birchwood, 6th St, San Francisco, CA 94103",
+        name: "Sandwall University",
+        address: "GreenVille, 6th St, San Marino, DS 94103",
         availableTime: "7:00AM - 9:00PM",
-        dockingpoint: {
+        dockingLocation: {
             one: "Balmine Library",
             two: "Balmine Library",
             three: "Balmine Library",
@@ -65,7 +65,7 @@ const dockingpoints = [
         name: "Birchwood University",
         address: "Birchwood, 6th St, San Francisco, CA 94103",
         availableTime: "7:00AM - 9:00PM",
-        dockingpoint: {
+        dockingLocation: {
             one: "Balmine Library",
             two: "Balmine Library",
             three: "Balmine Library",
@@ -101,7 +101,7 @@ function AvailableCampus() {
             {isNodeOpen && (
                 
                 <motion.div
-                className='absolute top-0   z-30 cursor-none py-20 px-20 max-w-[1400px] w-full h-screen'
+                className='absolute top-0   z-30 py-20 px-20 max-w-[1400px] w-full h-screen'
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 exit={{opacity: 0}}
@@ -118,9 +118,9 @@ function AvailableCampus() {
                                     {dockingpoint?.name}
                                 </h1>
 
-                                <p className='mt-10'>{dockingpoint?.address}</p>
+                                <p className='mt-10 bg-gray-400 h-15'>{dockingpoint?.address}</p>
 
-                                <div className='w-full'>
+                                <div className='w-full text-center'>
                                     <p className='text-center mt-10 text-[20px] font-semibold'>
                                         Docking Stations
                                     </p>
@@ -128,10 +128,11 @@ function AvailableCampus() {
                                         <div className='w-10 h-10 flex justify-center items-center rounded-[60px] mt-5 bg-[#555]'>
                                             <ArrowDown color='white'/>
                                         </div>
-                                        
                                     </div>
                                     
+                                    <p className='mt-10 text-[#777]'>{dockingpoint?.dockingLocation?.one}</p>
                                 </div>
+                                
                             </div>
                         ))}
 
