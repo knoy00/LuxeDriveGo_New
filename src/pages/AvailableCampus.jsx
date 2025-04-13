@@ -9,26 +9,26 @@ const dockingpoints = [
         name: "Birchwood University",
         address: "Birchwood, 6th St, San Francisco, CA 94103",
         availableTime: "7:00AM - 9:00PM",
-        dockingpoint: {
+        dockingLocation: {
             one: "Balmine Library",
-            two: "Balmine Library",
-            three: "Balmine Library",
-            four: "Balmine Library",
-            five: "Balmine Library"
+            two: "East Gate",
+            three: "Central Court",
+            four: "Southgate Park",
+            five: "Zenith Cafeteria"
         },
 
     },
     {
         id: 2,
-        name: "Birchwood University",
-        address: "Birchwood, 6th St, San Francisco, CA 94103",
+        name: "Westpine University",
+        address: "13 Oakridge Avenue, Westpine District, Western Region",
         availableTime: "7:00AM - 9:00PM",
         dockingLocation: {
-            one: "Balmine Library",
-            two: "Balmine Library",
-            three: "Balmine Library",
-            four: "Balmine Library",
-            five: "Balmine Library"
+            one: "Riverbend Commons",
+            two: "Maple Dorms",
+            three: "West Lecture Theatre",
+            four: "Tech Quad",
+            five: "Astro Labs"
         },
 
     },
@@ -38,7 +38,7 @@ const dockingpoints = [
         address: "Baroson, 8th Ave, Maple, CA 94103",
         availableTime: "7:00AM - 9:00PM",
         dockingLocation: {
-            one: "Balmine Library",
+            one: "Tower Entrance",
             two: "Hallman Hall",
             three: "School Cafetaria",
             four: "Pluto Block",
@@ -52,25 +52,25 @@ const dockingpoints = [
         address: "GreenVille, 6th St, San Marino, DS 94103",
         availableTime: "7:00AM - 9:00PM",
         dockingLocation: {
-            one: "Balmine Library",
-            two: "Balmine Library",
-            three: "Balmine Library",
-            four: "Balmine Library",
-            five: "Balmine Library"
+            one: "Scholar's Walk",
+            two: "Engineering Dome",
+            three: "Cedar Cafe",
+            four: "Services Center",
+            five: "Horizon Amphitheatre"
         },
 
     },
     {
         id: 5,
-        name: "Birchwood University",
-        address: "Birchwood, 6th St, San Francisco, CA 94103",
+        name: "Ridgeview College",
+        address: "200 Willow Bend Street, Northlake Town, Northern State",
         availableTime: "7:00AM - 9:00PM",
         dockingLocation: {
-            one: "Balmine Library",
-            two: "Balmine Library",
-            three: "Balmine Library",
-            four: "Balmine Library",
-            five: "Balmine Library"
+            one: "Ridge Plaza",
+            two: "Admin Block",
+            three: "Sycamore Hall",
+            four: "Arts Village",
+            five: "Faculty Bridge"
         },
 
     },
@@ -118,7 +118,7 @@ function AvailableCampus() {
                                     {dockingpoint?.name}
                                 </h1>
 
-                                <p className='mt-10 bg-gray-400 h-15'>{dockingpoint?.address}</p>
+                                <p className='mt-10 bg-[#eee] h-15 px-3 rounded-xl py-2'>{dockingpoint?.address}</p>
 
                                 <div className='w-full text-center'>
                                     <p className='text-center mt-10 text-[20px] font-semibold'>
@@ -131,6 +131,10 @@ function AvailableCampus() {
                                     </div>
                                     
                                     <p className='mt-10 text-[#777]'>{dockingpoint?.dockingLocation?.one}</p>
+                                    <p className='mt-10 text-[#777]'>{dockingpoint?.dockingLocation?.two}</p>
+                                    <p className='mt-10 text-[#777]'>{dockingpoint?.dockingLocation?.three}</p>
+                                    <p className='mt-10 text-[#777]'>{dockingpoint?.dockingLocation?.four}</p>
+                                    <p className='mt-10 text-[#777]'>{dockingpoint?.dockingLocation?.five}</p>
                                 </div>
                                 
                             </div>
