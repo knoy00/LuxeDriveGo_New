@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowDown } from 'lucide-react'
+import { X } from 'lucide-react'
 
 const dockingpoints = [
     {
@@ -77,10 +78,7 @@ const dockingpoints = [
 ]
 
 function AvailableCampus() {
-    const handleclick = () => {
-        console.log("clicked")
-    }
-
+    
     const [isNodeOpen, setIsNodeOpen] = useState(false)
   return (
     <div className='relative flex justify-center items-center w-full h-screen overflow-hidden font-helvetica'>
@@ -111,14 +109,18 @@ function AvailableCampus() {
                         <h1 className='text-black text-[40px] text-center'>Find Your Docking Station</h1>
                     </div>
 
-                    <div className='flex justify-center mt-10 space-x-10'>
+                    <div className='absolute top-[10%] right-0 cursor-pointer w-10 h-10 bg-black rounded-4xl flex justify-center items-center' onClick={() => setIsNodeOpen(false)}>
+                        <X color='white'/>
+                    </div>
+
+                    <div className='flex justify-center my-10 space-x-10'>
                         {dockingpoints.map((dockingpoint, index) => (
                             <div key={index}>
                                 <h1 className='text-[#444] text-[25px] border-b border-[#888] w-70 pb-5 text-center'>
                                     {dockingpoint?.name}
                                 </h1>
 
-                                <p className='mt-10 bg-[#eee] h-15 px-3 rounded-xl py-2'>{dockingpoint?.address}</p>
+                                <p className='mt-10 bg-[#eee] h-15 px-3 rounded-xl py-2 text-center'>{dockingpoint?.address}</p>
 
                                 <div className='w-full text-center'>
                                     <p className='text-center mt-10 text-[20px] font-semibold'>
@@ -139,6 +141,13 @@ function AvailableCampus() {
                                 
                             </div>
                         ))}
+
+                    </div>
+
+                    <div className='w-full bg-[#0c0c0c] h-30 rounded-3xl flex justify-center items-center px-10'>
+                        <p className='text-[#555] text-center'>
+                            Use of the campus e-bike service is subject to local regulations and institutional policies. Users must adhere to traffic rules and prioritize safety at all times. By accessing the service, you agree to ride responsibly and park only at designated docking stations
+                        </p>
 
                     </div>
 
