@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useInView, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import Ebike from  '../assets/images/bikeBlack.png'
 import Hero from '../components/Hero'
@@ -10,14 +10,8 @@ function Animate() {
         target: ref,
         offset: ["center center", "end start"]
     })
-    const scale = useTransform(scrollYProgress1, [0, 1], [0.5, 20.5]);
+    const scale = useTransform(scrollYProgress1, [0, 1], [0.5, 30.5]);
 
-    
-    const {scrollYProgress:scrollYProgress2} = useScroll({
-        target: ref,
-        offset: ["center center", "end start"]
-    })
-    const scale2 = useTransform(scrollYProgress2, [0, 1], [0.5, 50.5]);
 
     const ref3 = useRef(null);
     const {scrollYProgress:scrollYProgress3} = useScroll({
@@ -27,6 +21,9 @@ function Animate() {
     const scale3 = useTransform(scrollYProgress3, [0, 1], [1, 0.8])
     const borderRadius = useTransform(scrollYProgress3, [0, 1], ['0px', '150px'])
     const blur = useTransform(scrollYProgress3, [0, 1], ['0px', '50px'])
+
+    const ref2 = useRef(null);
+    const isInView = useInView(ref2, {once: true});
 
 
   return (
@@ -40,7 +37,7 @@ function Animate() {
         </div>
         <div ref={ref} className=' relative w-full h-[200vh] flex justify-center items-center overflow-hidden font-helvetica'>
             
-            <div className='absolute left-100 flex flex-col space-y-40 w-[500px]'>
+            <div className=' flex flex-col space-y-20 w-[500px]'>
                 <div className='border-b border-[#ddd] border-r rounded-br-[140px] pr-5 pb-5  h-[500px] flex justify-center items-center text-center'>
                     <div className='px-10'>
                         <h1 className='text-4xl mb-10'>Speed</h1>
@@ -62,13 +59,13 @@ function Animate() {
                 
             </div>
 
-            <motion.div className='z-5 bg-[#000] w-[350px] h-[350px] rounded-[170px] flex justify-center items-center' style={{scale}}>
-                <motion.div style={{scale2}} className='bg-white w-[50px] h-[50px] rounded-4xl'>
+            <motion.div className='z-5 bg-[#000] w-[250px] h-[250px] rounded-[170px] flex justify-center items-center' style={{scale}}>
+                <motion.div className='bg-white w-[40px] h-[40px] rounded-4xl'>
                     
                 </motion.div>
             </motion.div>
 
-            <div className='absolute right-100 flex flex-col space-y-40 w-[500px]'>
+            <div className=' flex flex-col space-y-20 w-[500px]'>
                 <div className='border-b border-[#ddd] border-l rounded-bl-[140px] pr-5 pb-5 h-[500px] flex justify-center items-center'>
                     <div className='px-10'>
                         <h1 className='text-4xl mb-10'>Speed</h1>
@@ -89,12 +86,16 @@ function Animate() {
                 </div>
             </div>
         </div>
-        <motion.div className=' bg-black w-full py-10' ref={ref3} style={{scale: scale3, borderRadius, blur}}>
-            <div className='max-w-[1400px] mx-auto bg-[#000] py-10 rounded-[70px]'>
+        <motion.div className=' bg-black w-full py-5' ref={ref3} style={{scale: scale3, borderRadius, blur}}>
+            <div className='max-w-[1400px] mx-auto py-10 rounded-[70px]'>
                 <div className='w-full text-center '>
-                    <h1 className='text-white text-[40px] mb-5'>
+                    <motion.h1 ref={ref2} className='text-white text-[50px] mb-5 font-semibold'
+                    initial={{opacity: 0, filter: "blur(50px)"} }
+                    animate={isInView ?{opacity: 1, filter: "blur(0px)"} : {}}
+                    transition={{duration: .8, ease: 'easeInOut'}}
+                    >
                         We're Coming to You Soon
-                    </h1>
+                    </motion.h1>
                     <p className='text-[#888] text-[18px]'>
                         We're starting on campus, but you're definitely not left out. <br /> Our e-bike program is gearing up to roll out to the general public—so get ready to ride with us soon!
                     </p>
