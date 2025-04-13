@@ -35,23 +35,23 @@ function Animate() {
                 From getting to class on time to cruising around campus with ease, our e-bikes are built to make student life simpler, faster, and way more fun. <br /> Check out all the cool features that make riding with us a no-brainer.
             </p>
         </div>
-        <div ref={ref} className=' relative w-full h-[200vh] flex justify-center items-center overflow-hidden font-helvetica'>
+        <div ref={ref} className='w-full h-[200vh] flex justify-center items-center overflow-hidden font-helvetica'>
             
             <div className=' flex flex-col space-y-20 w-[500px]'>
                 <div className='border-b border-[#ddd] border-r rounded-br-[140px] pr-5 pb-5  h-[500px] flex justify-center items-center text-center'>
                     <div className='px-10'>
-                        <h1 className='text-4xl mb-10'>Speed</h1>
-                        <p className='text-[18px] text-[#777]'>
-                            Lorem, ipsum dolor sit amet consectetur      adipisicing elit. Commodi, dolorem nobis non error molestias ipsam, impedit atque tempore, obcaecati odio sint. Odio quasi minus magnam, suscipit harum illo? Impedit, quisquam.
+                        <h1 className='text-4xl mb-10 text-[#444]'>No Emission</h1>
+                        <p className='text-[18px] text-[#777] tracking-wider'>
+                            Experience a sustainable future with zero-emission e-mobylettes — eco-friendly technology that delivers green mobility without sacrificing performance.
                         </p>
                     </div>
                     
                 </div>
                 <div className='border-t border-[#ddd] border-r rounded-tr-[140px] pr-5 pb-5  h-[500px] flex justify-center items-center'>
-                    <div className='px-10'>
+                    <div className='px-10 text-center'>
                         <h1 className='text-4xl mb-10'>Speed</h1>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur      adipisicing elit. Commodi, dolorem nobis non error molestias ipsam, impedit atque tempore, obcaecati odio sint. Odio quasi minus magnam, suscipit harum illo? Impedit, quisquam.
+                        <p className='tracking-wider text-[18px] text-[#777]'>
+                            Navigate the city with ease using our e-bike's nimble and responsive design — built for smooth urban rides, quick commutes, and effortless maneuvering.
                         </p>
                     </div>
                     
@@ -59,7 +59,7 @@ function Animate() {
                 
             </div>
 
-            <motion.div className='z-5 bg-[#000] w-[250px] h-[250px] rounded-[170px] flex justify-center items-center' style={{scale}}>
+            <motion.div className=' z-5 bg-[#000] w-[250px] h-[250px] rounded-[170px] flex justify-center items-center' style={{scale}}>
                 <motion.div className='bg-white w-[40px] h-[40px] rounded-4xl'>
                     
                 </motion.div>
@@ -67,19 +67,19 @@ function Animate() {
 
             <div className=' flex flex-col space-y-20 w-[500px]'>
                 <div className='border-b border-[#ddd] border-l rounded-bl-[140px] pr-5 pb-5 h-[500px] flex justify-center items-center'>
-                    <div className='px-10'>
-                        <h1 className='text-4xl mb-10'>Speed</h1>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur      adipisicing elit. Commodi, dolorem nobis non error molestias ipsam, impedit atque tempore, obcaecati odio sint. Odio quasi minus magnam, suscipit harum illo? Impedit, quisquam.
+                    <div className='px-10 text-center'>
+                        <h1 className='text-4xl mb-10'>Ride Smart, Pay Less</h1>
+                        <p className='text-[18px] text-[#777] tracking-wider'>
+                            Enjoy fast, eco-friendly campus rides without the hefty price tag — built for students who value both savings and sustainability.
                         </p>
                     </div>
                     
                 </div>
                 <div className='border-t border-[#ddd] border-l rounded-tl-[140px] pr-5 pb-5  h-[500px] flex justify-center items-center'>
-                    <div className='px-10'>
-                        <h1 className='text-4xl mb-10'>Speed</h1>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur      adipisicing elit. Commodi, dolorem nobis non error molestias ipsam, impedit atque tempore, obcaecati odio sint. Odio quasi minus magnam, suscipit harum illo? Impedit, quisquam.
+                    <div className='px-10 text-center'>
+                        <h1 className='text-4xl mb-10'>Efortless Commuting</h1>
+                        <p className='text-[18px] text-[#777] tracking-wider'>
+                            Skip the hassle of walking across campus and glide through your day with our easy-to-ride e-bikes, perfect for quick and convenient trips between classes.
                         </p>
                     </div>
                     

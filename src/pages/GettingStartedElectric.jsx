@@ -54,7 +54,7 @@ function GettingStartedElectric() {
         </motion.p>
         <div className='mt-30'>
             <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
-                <div className='w-80 h-80 contain-content'>
+                <div className='w-80 h-80 contain-content rounded-4xl'>
                     <img src={Hand} loading='lazy' alt="Phone in hand" className='w-full'/>
                 </div>                            <div>
                     <h3 className='text-[22px] font-bold text-[#1f1f1f]'>1. Find a Nearby E-Bike</h3>
@@ -64,7 +64,7 @@ function GettingStartedElectric() {
                 </div>
             </div>
             <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
-                <div className='w-80 h-80 contain-content'>
+                <div className='w-80 h-80 contain-content rounded-4xl'>
                     <img src={Scanning} loading='lazy' alt="Man with phone" className='w-full'/>
                 </div>                            <div>
                     <h3 className='text-[22px] font-bold text-[#1f1f1f]'>2. Unlock With Your Phone</h3>
@@ -74,9 +74,10 @@ function GettingStartedElectric() {
                 </div>
             </div>
             <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
-                <div className='w-80 h-80 contain-content'>
-                    <img src={Riding} loading='lazy' alt="Man riding bike" className='w-full'/>
-                </div>                            <div>
+                <div className='w-80 h-80 contain-content rounded-4xl'>
+                    <img src={Riding} loading='lazy' alt="Man riding bike" className='w-full '/>
+                </div>
+                <div>
                     <h3 className='text-[22px] font-bold text-[#1f1f1f]'>3. Ride Accross Campus</h3>
                     <p className='text-[18px] font-light text-[#424242] px-6 mt-5 w-160'>
                         Cruise to your destination comfortably and quickly. Whether you're heading to class, the library, or just exploring — the ride is yo
@@ -84,7 +85,7 @@ function GettingStartedElectric() {
                 </div>
             </div>
             <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
-                <div className='w-80 h-80 contain-content'>
+                <div className='w-80 h-80 contain-content rounded-4xl'>
                     <img src={Woman} loading='lazy' alt="Bike" className='w-full'/>
                 </div>
                 <div>
@@ -95,7 +96,7 @@ function GettingStartedElectric() {
                 </div>
             </div>
             <div className='flex  mt-10 space-x-20 border-b border-gray-200 pb-5'>
-                <div className='w-80 h-80 contain-content'>
+                <div className='w-80 h-80 contain-content rounded-4xl'>
                     <img src={Payment} loading='lazy' alt="Payment" className='w-full'/>
                 </div>                            <div>
                     <h3 className='text-[22px] font-bold text-[#1f1f1f]'>5. Pay Seamlessly</h3>
