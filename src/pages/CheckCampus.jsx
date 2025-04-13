@@ -1,7 +1,8 @@
-import React, { useRef } from 'react'
+import React, { useRef, } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import AvailableCampus from './AvailableCampus'
 
-function Rotate() {
+function CheckCampus() {
   const ref = useRef(null)
 
   const { scrollYProgress } = useScroll({
@@ -12,8 +13,9 @@ function Rotate() {
   const left = useTransform(scrollYProgress, [0, 1], ["-100%", "100%"])
   const right = useTransform(scrollYProgress, [0, 1], ["100%", "-100%"])
 
+
   return (
-    <div className='h-[300vh] w-full bg-gray-100'>
+    <div className='h-[200vh] w-full bg-black'>
       <div ref={ref} className='h-[100vh] w-full flex items-center justify-center relative overflow-hidden bg-black'>
 
         <motion.div
@@ -29,14 +31,24 @@ function Rotate() {
         >
         </motion.div>
 
-        <div className='z-10 max-w-[1400px]'>
-            <h1>dede</h1>
+        <div className='z-10 max-w-[1400px] absolute top-0 py-10 text-center'>
+            <h1 className='mb-10 text-[40px] font-semibold text-[#000] tracking-wide'>Rolling Out Accross Campuses <br />Near You
+            </h1>
+
+            <p className='text-[20px] font-light text-[#000]'>
+                Our electric bike program is making its way to select universities and colleges — bringing fast, eco-friendly, and affordable rides right to your campus. Whether you’re heading to class or grabbing a quick bite, riding just got way easier and a lot more fun.
+
+            </p>
+
+            
         </div>
 
       </div>
+
+      <AvailableCampus />
       
     </div>
   )
 }
 
-export default Rotate
+export default CheckCampus
