@@ -16,6 +16,7 @@ import {useState} from 'react'
 import LoaderScreen from '../components/LoaderScreen'
 import GettingStartedElectric from './GettingStartedElectric'
 import HowItWorksElectric from './HowItWorksElectric'
+import Rotate from './Rotate'
 
 const imagesToLoad = 1;
 function ElectricBike() {
@@ -79,6 +80,7 @@ function ElectricBike() {
                         <GettingStartedElectric />
                     </div>
                     <Animate />
+                    <Rotate />
                 </div>
             </div>
         )}
