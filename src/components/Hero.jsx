@@ -6,9 +6,9 @@ import { ArrowRight, CarTaxiFront, CreditCard, Lock } from 'lucide-react'
 
 function Hero() {
   return (
-    <div className='w-full mt-0 px-5 font-SFPro md:px-10 lg:px-20 md:bg-yellow-200 bg-green-300 sm:bg-red-500 lg:bg-blue-500'>
+    <div className='w-full mt-0 px-5 font-SFPro md:px-10 lg:px-20'>
       <div className='text-center py-10'>
-        <motion.h1 className='text-4xl md:text-3xl md:mt-15 lg:mt-15 font-semibold font-helvetica sm:text-[40px]' 
+        <motion.h1 className='text-4xl md:text-3xl md:mt-15 lg:mt-15 font-semibold font-helvetica sm:text-[40px] md:text-[50px] lg:text-[60px]' 
         initial={{opacity: 0, y: 200}}
         animate={{opacity:1, y: 0}}
         transition={{duration: 1.4, ease: 'easeOut'}}
@@ -33,12 +33,12 @@ function Hero() {
             <ArrowRight color={'black'} className='rounded-2xl bg-white'/>
         </motion.div>
 
-        <motion.div className='flex flex-col justify-center items-center mt-20 space-y-10 text-white '
+        <motion.div className='flex flex-col justify-center items-center mt-20 space-y-10 text-white lg:flex-row lg:space-y-0 lg:gap-x-10 lg:max-w-[1400px] lg:mx-auto'
         initial={{opacity: 0, y: 130}}
         animate={{opacity:1, y: 0}}
         transition={{duration: 2, ease: 'easeOut'}}
         >
-            <div className='bg-black w-full max-w-[500px] px-10 py-10 flex flex-col justify-center items-center rounded-4xl sm:w-150 sm:max-w-[590px] sm:mx-auto'>
+            <div className='bg-black w-full max-w-[500px] px-10 py-10 flex flex-col justify-center items-center rounded-4xl sm:w-150 sm:max-w-[590px] sm:mx-auto lg:h-[300px]'>
                 <CarTaxiFront color='black' size={70} className='mb-10 bg-white rounded-4xl p-2 '/>
                 <p className='h-[70px] text-[20px] font-regular'>Fast and convenient rides</p>
             </div>
