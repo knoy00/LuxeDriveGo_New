@@ -24,7 +24,7 @@ const Navbar = ({signin, signup, help}) => {
           </div>
 
           <div className='md:hidden'>
-            <Power color='white' />
+            <Power color='white' size={20}/>
           </div>
         </div>
       </div>

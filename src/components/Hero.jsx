@@ -8,7 +8,7 @@ function Hero() {
   return (
     <div className='w-full mt-0 px-5 font-SFPro md:px-10 lg:px-20 md:bg-yellow-200 bg-green-300 sm:bg-red-500 lg:bg-blue-500'>
       <div className='text-center py-10'>
-        <motion.h1 className='text-4xl md:text-3xl md:mt-15 lg:mt-15 font-semibold font-helvetica'
+        <motion.h1 className='text-4xl md:text-3xl md:mt-15 lg:mt-15 font-semibold font-helvetica sm:text-[40px]' 
         initial={{opacity: 0, y: 200}}
         animate={{opacity:1, y: 0}}
         transition={{duration: 1.4, ease: 'easeOut'}}
@@ -33,22 +33,22 @@ function Hero() {
             <ArrowRight color={'black'} className='rounded-2xl bg-white'/>
         </motion.div>
 
-        <motion.div className='flex flex-col justify-center items-center mt-20 space-y-10 text-white'
+        <motion.div className='flex flex-col justify-center items-center mt-20 space-y-10 text-white '
         initial={{opacity: 0, y: 130}}
         animate={{opacity:1, y: 0}}
         transition={{duration: 2, ease: 'easeOut'}}
         >
-            <div className='bg-black w-110 px-10 py-15 flex flex-col justify-center items-center rounded-4xl'>
+            <div className='bg-black w-full max-w-[500px] px-10 py-10 flex flex-col justify-center items-center rounded-4xl sm:w-150 sm:max-w-[590px] sm:mx-auto'>
                 <CarTaxiFront color='black' size={70} className='mb-10 bg-white rounded-4xl p-2 '/>
-                <p className='text-[20px] font-regular'>Fast and convenient rides</p>
+                <p className='h-[70px] text-[20px] font-regular'>Fast and convenient rides</p>
             </div>
-            <div className='bg-black w-110 px-10 py-15 flex flex-col justify-center items-center rounded-4xl'>
+            <div className='bg-black w-full max-w-[500px] px-10 py-15 flex flex-col justify-center items-center rounded-4xl sm:w-150 sm:max-w-[590px] sm:mx-auto'>
                 <CreditCard color='black' size={70} className='mb-10 bg-white rounded-4xl p-2'/>
-                <p className='text-[20px] font-regular'>Easy payments, cashless experience</p>
+                <p className='text-[20px] h-[70px] font-regular'>Easy payments, cashless experience</p>
             </div>
-            <div className='bg-black w-110 px-10 py-15 flex flex-col justify-center items-center rounded-4xl'>
+            <div className='bg-black w-full max-w-[500px] px-10 py-15 flex flex-col justify-center items-center rounded-4xl sm:w-150 sm:max-w-[590px] sm:mx-auto'>
                 <Lock color='black' size={70} className='mb-10 bg-white rounded-4xl p-2'/>
-                <p className='text-[20px] font-regular'>Safe rides with verified drivers</p>
+                <p className='text-[20px] h-[70px] font-regular'>Safe rides with verified drivers</p>
             </div>
            
         </motion.div>
