@@ -37,7 +37,7 @@ function ElectricBike() {
             <div>
                 <ScrollToTop />
                 <Navbar />
-                <div className='w-full font-helvetica'>
+                <div className='w-full font-SFPro'>
                     <div className='max-w-[1400px] mx-auto mt-20 '>
                         <div className='text-center  bg-[#efefef] pt-10 px-20 rounded-4xl'>
                             <motion.h1 className='text-[50px] w-full max-w-2xl mx-auto font-semibold text-[#424242] leading-[4rem] mb-3'

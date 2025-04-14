@@ -59,7 +59,7 @@ function CheckCampus() {
 
           <div className='flex justify-center items-center gap-x-5 mt-20'>
             {cards.map((card, index) => (
-              <div key={index} className='flex flex-col gap-y-2 border-2 border-black rounded-[28px] p-5 w-110 h-85'>
+              <div key={index}className='flex flex-col gap-y-2 border-2 border-black rounded-[28px] p-5 w-110 h-85'>
                 <Bike size={50}/>
                 <h1 className='text-[30px] font-semibold text-[#000] h-23 mt-10'>{card.header}</h1>
                 <p className='text-[16px] font-light text-[#000] h-23'>{card.description}</p>

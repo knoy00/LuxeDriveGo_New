@@ -90,20 +90,28 @@ function Animate() {
             <div className='max-w-[1400px] mx-auto py-10 rounded-[70px]'>
                 <div className='w-full text-center '>
                     <motion.h1 ref={ref2} className='text-white text-[50px] mb-5 font-semibold'
-                    initial={{opacity: 0, filter: "blur(50px)"} }
-                    animate={isInView ?{opacity: 1, filter: "blur(0px)"} : {}}
-                    transition={{duration: .8, ease: 'easeInOut'}}
+                    initial={{opacity: 0, filter: "blur(30px)",} }
+                    animate={isInView ? {opacity: 1, filter: "blur(0px)",} : {}}
+                    transition={{duration:.9, ease: 'easeInOut', delay: 1.2}}
                     >
                         We're Coming to You Soon
                     </motion.h1>
-                    <p className='text-[#888] text-[18px]'>
+                    <motion.p className='text-[#888] text-[18px]'
+                    initial={{opacity: 0, filter: "Blur(30px)"}}
+                    animate={ isInView ? {opacity: 1, filter: "blur(0px)"} : {}}
+                    transition={{duration: .8, ease: "easeInOut", delay: .8}}
+                    >
                         We're starting on campus, but you're definitely not left out. <br /> Our e-bike program is gearing up to roll out to the general public—so get ready to ride with us soon!
-                    </p>
+                    </motion.p>
                 </div>
 
-                <div className='w-full flex justify-center items-center'>
+                <motion.div className='w-full flex justify-center items-center'
+                initial={{opacity: 0, filter: "Blur(30px)"}}
+                animate={ isInView ? {opacity: 1, filter: "blur(0px)"} : {}}
+                transition={{duration: .8, ease: "easeInOut", delay: .7}}
+                >
                     <img src={Ebike} alt="Electric Bike" className='w-170'/>
-                </div>
+                </motion.div>
 
                 <div className='w-full flex justify-center items-center'>
                     <button className='bg-white px-13 py-6 mt-10 font-regular hover:bg-[#ccc] rounded-[50px] cursor-pointer text-[20px]'>Learn More</button>

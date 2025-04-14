@@ -82,11 +82,11 @@ function AvailableCampus() {
     const [isNodeOpen, setIsNodeOpen] = useState(false)
   return (
     <div className='relative flex justify-center items-center w-full h-screen overflow-hidden font-helvetica'>
-        <motion.div className='bg-white absolute rounded-full p-2 flex justify-center items-center'
+        <motion.div className='bg-white absolute rounded-full  p-2 flex justify-center items-center'
         animate={{
             scale: [.5, 2, .5],
             opacity: [.5, 1, .5],
-            filter: ["Blur(10px)", "Blur(20px)", "Blur(10px)"]
+            filter: ["Blur(10px)", "Blur(20px)", "Blur(10px)"],
             
         }}
         transition={{

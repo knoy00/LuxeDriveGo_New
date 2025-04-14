@@ -1,11 +1,16 @@
 @font-face {
   font-family: Helvetica;
-  src: url("../src/assets/fonts/Helvetica.ttf");
+  src: url("../src/assets/fonts/?Helvetica/Helvetica.ttf");
+}
+@font-face {
+  font-family: SFPro;
+  src: url("../src/assets/fonts/SFPro/SFPRODISPLAYREGULAR.OTF");
+  src: url()
 }
 
 @import "tailwindcss";
 
 @theme {
-  /* --font-poppins: Poppins, sans-serif */
   --font-helvetica: Helvetica, Poppins, "sans-serif";
+  --font-SFPro: SFPro, "Poppins", "sans-serif"
 }
