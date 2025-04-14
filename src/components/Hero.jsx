@@ -6,9 +6,9 @@ import { ArrowRight, CarTaxiFront, CreditCard, Lock } from 'lucide-react'
 
 function Hero() {
   return (
-    <div className='w-full mt-30 px-20 h-[75vh] font-SFPro'>
-      <div className='text-center'>
-        <motion.h1 className='text-6xl mt-15 font-semibold font-helvetica'
+    <div className='w-full mt-0 px-5 font-SFPro md:px-10 lg:px-20 md:bg-yellow-200 bg-green-300 sm:bg-red-500 lg:bg-blue-500'>
+      <div className='text-center py-10'>
+        <motion.h1 className='text-4xl md:text-3xl md:mt-15 lg:mt-15 font-semibold font-helvetica'
         initial={{opacity: 0, y: 200}}
         animate={{opacity:1, y: 0}}
         transition={{duration: 1.4, ease: 'easeOut'}}
@@ -33,7 +33,7 @@ function Hero() {
             <ArrowRight color={'black'} className='rounded-2xl bg-white'/>
         </motion.div>
 
-        <motion.div className='flex justify-center items-center mt-20 space-x-10 text-white'
+        <motion.div className='flex flex-col justify-center items-center mt-20 space-y-10 text-white'
         initial={{opacity: 0, y: 130}}
         animate={{opacity:1, y: 0}}
         transition={{duration: 2, ease: 'easeOut'}}
