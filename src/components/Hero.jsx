@@ -6,9 +6,9 @@ import { ArrowRight, CarTaxiFront, CreditCard, Lock } from 'lucide-react'
 
 function Hero() {
   return (
-    <div className='w-full mt-0 px-5 font-SFPro md:px-10 lg:px-20'>
-      <div className='text-center py-10'>
-        <motion.h1 className='text-4xl md:text-3xl md:mt-15 lg:mt-15 font-semibold font-helvetica sm:text-[40px] md:text-[50px] lg:text-[60px]' 
+    <div className='w-full mt-0 px-5 font- md:px-10 lg:px-20 bg-black sm:bg-black md:bg-white lg:bg-white'>
+      <div className='text py-10'>
+        <motion.h1 className='text-[30px] text-[#eee] md:mt-15 lg:mt-15 font-semibold font-SFPro md:text-center sm:text-[40px] md:text-[44px] lg:text-[52px] lg:text-[#222] md:text-[#222]' 
         initial={{opacity: 0, y: 200}}
         animate={{opacity:1, y: 0}}
         transition={{duration: 1.4, ease: 'easeOut'}}
@@ -16,7 +16,7 @@ function Hero() {
             Your Ride, Your Way!
         </motion.h1>
 
-        <motion.h3 className='text-[18px] mt-5 font-regular font-helvetica'
+        <motion.h3 className='text-[17px] mt-5 font-regular font-SFPro text-[#eee] md:text-center lg:text-center md:text-[#222] lg:text-[#222]'
         initial={{opacity: 0, y: 250}}
         animate={{opacity:1, y: 0}}
         transition={{duration: 1.6, ease: 'easeOut'}}
@@ -24,31 +24,31 @@ function Hero() {
             Seamless rides at your fingertips. <br/> Book, ride, and arrive with comfort and style — anytime, anywhere.
         </motion.h3>
 
-        <motion.div className='flex justify-center items-center mt-10 bg-black w-55 h-10 mx-auto rounded-4xl px-5 py-7 cursor-pointer border-2 border-black hover:bg-[#444]'
+        <motion.div className='flex justify-center items-center mt-10 bg-white w-55 h-10 md:mx-auto lg:mx-auto md:bg-black  rounded-2xl px-5 py-7 cursor-pointer border-2 border-black hover:bg-[#ddd]'
         initial={{opacity: 0, y: 250}}
         animate={{opacity:1, y: 0}}
         transition={{duration: 1.8, ease: 'easeOut'}}
         >
-            <button className='text-white font-semibold cursor-pointer mr-2'>Get Started</button>
-            <ArrowRight color={'black'} className='rounded-2xl bg-white'/>
+            <button className='text-black font-semibold cursor-pointer mr-2 md:text-[#fff] lg:text-white'>Get Started</button>
+            <ArrowRight color={'white'} className='rounded-2xl bg-black '/>
         </motion.div>
 
-        <motion.div className='flex flex-col justify-center items-center mt-20 space-y-10 text-white lg:flex-row lg:space-y-0 lg:gap-x-10 lg:max-w-[1400px] lg:mx-auto'
+        <motion.div className='flex flex-col justify-center items-center mt-20 space-y-10 text-black lg:flex-row lg:space-y-0 lg:gap-x-10 lg:max-w-[1400px] lg:mx-auto '
         initial={{opacity: 0, y: 130}}
         animate={{opacity:1, y: 0}}
         transition={{duration: 2, ease: 'easeOut'}}
         >
-            <div className='bg-black w-full max-w-[500px] px-10 py-10 flex flex-col justify-center items-center rounded-4xl sm:w-150 sm:max-w-[590px] sm:mx-auto lg:h-[300px]'>
-                <CarTaxiFront color='black' size={70} className='mb-10 bg-white rounded-4xl p-2 '/>
-                <p className='h-[70px] text-[20px] font-regular'>Fast and convenient rides</p>
+            <div className='bg-white w-full max-w-[500px] px-10 py-10 flex flex-col justify-center items-center rounded-4xl sm:w-150 sm:max-w-[590px] sm:mx-auto lg:h-[300px] md:bg-black lg:bg-black md:text-[#fff] lg:text-[#fff]'>
+                <CarTaxiFront color='white' size={60} className='mb-10 bg-black rounded-4xl p-2 md:border-3 lg:border-3 '/>
+                <p className='h-[70px] text-[17px] font-regular'>Fast and convenient rides</p>
             </div>
-            <div className='bg-black w-full max-w-[500px] px-10 py-15 flex flex-col justify-center items-center rounded-4xl sm:w-150 sm:max-w-[590px] sm:mx-auto'>
-                <CreditCard color='black' size={70} className='mb-10 bg-white rounded-4xl p-2'/>
-                <p className='text-[20px] h-[70px] font-regular'>Easy payments, cashless experience</p>
+            <div className='bg-white w-full max-w-[500px] px-10 py-15 flex flex-col justify-center items-center rounded-4xl sm:w-150 sm:max-w-[590px] sm:mx-auto md:bg-black lg:bg-black md:text-[#fff] lg:text-[#fff]'>
+                <CreditCard color='white' size={60} className='mb-10 bg-black rounded-4xl p-2 md:border-3 lg:border-3' />
+                <p className='text-[17px] h-[70px] font-regular'>Easy payments, cashless experience</p>
             </div>
-            <div className='bg-black w-full max-w-[500px] px-10 py-15 flex flex-col justify-center items-center rounded-4xl sm:w-150 sm:max-w-[590px] sm:mx-auto'>
-                <Lock color='black' size={70} className='mb-10 bg-white rounded-4xl p-2'/>
-                <p className='text-[20px] h-[70px] font-regular'>Safe rides with verified drivers</p>
+            <div className='bg-white w-full max-w-[500px] px-10 py-15 flex flex-col justify-center items-center rounded-4xl sm:w-150 sm:max-w-[590px] sm:mx-auto md:bg-black lg:bg-black md:text-[#fff] lg:text-[#fff]'>
+                <Lock color='white' size={60} className='mb-10 bg-black rounded-4xl p-2 md:border-3 lg:border-3'/>
+                <p className='text-[17px] h-[70px] font-regular'>Safe rides with verified drivers</p>
             </div>
            
         </motion.div>
