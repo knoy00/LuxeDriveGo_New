@@ -5,6 +5,8 @@ import GetApp from './GetApp'
 import NewFeatures from './NewFeatures'
 import IntroBike from './IntroBike'
 import GettingAround from './GettingAround'
+import AppDownload from '../components/AppDownload'
+import Footer from '../components/Footer'
 
 function Home() {
   return (
@@ -15,6 +17,8 @@ function Home() {
       <NewFeatures />
       <IntroBike />
       <GettingAround />
+      <AppDownload />
+      <Footer />
     </div>
   )
 }
