@@ -17,6 +17,7 @@ import LoaderScreen from '../components/LoaderScreen'
 import GettingStartedElectric from './GettingStartedElectric'
 import HowItWorksElectric from './HowItWorksElectric'
 import CheckCampus from './CheckCampus'
+import Footer from '../components/Footer'
 
 const imagesToLoad = 1;
 function ElectricBike() {
@@ -82,6 +83,7 @@ function ElectricBike() {
                     <Animate />
                     <CheckCampus />
                 </div>
+                <Footer />
             </div>
         )}
     </>
