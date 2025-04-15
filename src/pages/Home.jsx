@@ -6,6 +6,7 @@ import NewFeatures from './NewFeatures'
 import IntroBike from './IntroBike'
 import GettingAround from './GettingAround'
 import AppDownload from '../components/AppDownload'
+import News from '../components/News'
 import Footer from '../components/Footer'
 
 function Home() {
@@ -18,6 +19,7 @@ function Home() {
       <IntroBike />
       <GettingAround />
       <AppDownload />
+      <News />
       <Footer />
     </div>
   )

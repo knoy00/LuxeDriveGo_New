@@ -100,7 +100,7 @@ const footerLinks = [
 
 function Footer() {
   return (
-    <div className='w-full bg-black h-[80vh] overflow-hidden'>
+    <div className='w-full bg-black h-[80vh] overflow-hidden font-SFPro '>
       <div className='max-w-[1400px] mx-auto px-10'>
         <div className='lg:flex lg:justify-between md:gap-x-10 lg:h-[35vh] lg:mt-3'>
             {footerLinks.map((footerLink) => (
@@ -118,7 +118,7 @@ function Footer() {
         <div className='w-full h-[1px] bg-[#efefef50] mt-10'></div> 
 
         <div className='flex justify-between items-center'>
-            <div className='md:flex md:justify-between md:items-center md:mt-10  md:gap-x-15'>
+            <div className='md:flex md:justify-between md:items-center md:mt-10  md:gap-x-10'>
                 <a href="https://facebook.com" className='hover:bg-[#333] p-4 rounded-2xl'><FaFacebookF color='white' size={20}/></a>
                 <a href="https://twitter.com" className='hover:bg-[#333] p-4 rounded-2xl'><FaTwitter color='white' size={20}/></a>
                 <a href="https://instagram.com" className='hover:bg-[#333] p-4 rounded-2xl'><FaInstagram color='white' size={20}/></a>
