@@ -7,7 +7,7 @@ import { Power } from 'lucide-react'
 const Navbar = ({signin, signup, help}) => {
     const navigate = useNavigate();
   return (
-    <div className=' bg-black w-full font-helvetica px-5 sticky top-0'>
+    <div className=' bg-black w-full font-helvetica px-5 sticky top-0 z-100'>
       <div className='max-w-[1400px] mx-auto px-3 py-8 md:px-10 lg:px-10'>
         <div className='flex justify-between items-center'>
           <div className='text-white text-2xl cursor-pointer'>

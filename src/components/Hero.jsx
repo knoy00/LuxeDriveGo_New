@@ -6,7 +6,7 @@ import { ArrowRight, CarTaxiFront, CreditCard, Lock } from 'lucide-react'
 
 function Hero() {
   return (
-    <div className='w-full mt-0 px-5 font- md:px-10 lg:px-20 bg-black sm:bg-black md:bg-white lg:bg-white'>
+    <div className='w-full mt-0 px-5 font- md:px-10 lg:px-20 bg-black sm:bg-black md:bg-white lg:bg-white font-SFPro'>
       <div className='text py-10'>
         <motion.h1 className='text-[30px] text-[#eee] md:mt-15 lg:mt-15 font-semibold font-SFPro md:text-center sm:text-[40px] md:text-[44px] lg:text-[52px] lg:text-[#222] md:text-[#222]' 
         initial={{opacity: 0, y: 200}}

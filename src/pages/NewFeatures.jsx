@@ -6,7 +6,7 @@ import DropOff from '../assets/images/Dropoff.jpeg'
 
 function NewFeatures() {
   return (
-    <div className='w-full bg-black text-white py-20 mt-0 font-helvetica px-10'>
+    <div className='w-full bg-black text-white py-20 mt-0 font-SFPro px-10'>
       <div className='max-w-[1200px] mx-auto'>
         <h1 className='text-[28px] font-semibold md:text-[42px] lg:text-[52px]'>What's New?</h1>
         <div className='mt-10'>
@@ -16,7 +16,7 @@ function NewFeatures() {
                 </div>
                 <div>
                     <h1 className='text-[28px] font-regular my-8'>Ride Scheduling</h1>
-                    <p className='text-[17px] md:text-[18px]'>
+                    <p className='text-[16px] md:text-[18px] font-light text-[#666] text-[]'>
                         Plan ahead with ease - our new Ride Scheduling feature lets you book your trips in advance, so you're alwayas on time, every, time.
                     </p>
                     <div className='md:w-full md:flex md:justify-center lg:block'>
@@ -31,7 +31,7 @@ function NewFeatures() {
                 </div>
                 <div>
                     <h1 className='text-[28px] font-regular my-8'>Ride Scheduling</h1>
-                    <p className='text-[17px] md:text-[18px]'>
+                    <p className='text-[16px] text-[#666] md:text-[18px] font-light'>
                         For added security, every ride now comes with a unique 4-digit Safety PIN. Before your trip begins, share this PIN with your driver to ensure you're in the right ride. This helps prevent ride mix-ups and enhances passenger safety.
                     </p>
                     <div className='md:w-full md:flex md:justify-center lg:block'>
@@ -48,7 +48,7 @@ function NewFeatures() {
                 </div>
                 <div>
                     <h1 className='text-[28px] font-regular my-8'>LuxeDrop</h1>
-                    <p className='text-[17px] md:text-[18px]'>
+                    <p className='text-[16px] md:text-[18px] text-[#666] font-light'>
                         Need to send a package quickly? LuxeDrop lets you book a driver to deliver your parcels, documents, or small items securely and on time. Whether it's a last-minute delivery or a planned drop-off, LuxeDrop ensures fast and reliable service.
                     </p>
                     <div className='md:w-full md:flex md:justify-center lg:block'>
