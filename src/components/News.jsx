@@ -8,10 +8,10 @@ function News() {
 
 
   return (
-    <div className='w-full bg-[#fff] h-[80vh] font-SFPro'>
+    <div className='w-full bg-[#fff] h-[80vh] font-SFPro sm:bg-pink-500 md:bg-green-500 lg:bg-blue-500'>
       <div className='max-w-[1400px] mx-auto py-10 px-10'>
         <div>
-            <motion.h1 className='lg:text-[48px] font-semibold'
+            <motion.h1 className='text-[40px] lg:text-[48px] font-semibold'
             ref={ref}
             initial={{opacity: 0, y: 200, filter: "blur(50px)"} }
             animate={inView ? {opacity: 1, y: 0, filter: "blur(0px)"}: {} }
@@ -19,9 +19,9 @@ function News() {
             >News and Updates</motion.h1>
         </div>
 
-        <div className='lg:flex lg:justify-between  lg:gap-x-10 mt-10 w-full'>
+        <div className='flex flex-col lg:flex-row lg:justify-between  lg:gap-x-10 mt-10 w-full'>
             <div>
-                <motion.h2 className='lg:text-[30px]'
+                <motion.h2 className='text-[18px] underline-offset-4 underline lg:text-[30px]'
                 initial={{opacity: 0, y: 200, filter: "blur(50px)"}}
                 animate={ inView ? {opacity: 1, y: 0, filter: "blur(0px)"} : {} }
                 transition={{duration: .8, ease: 'easeInOut'}}
@@ -47,7 +47,7 @@ function News() {
                     Join us under the stars for an unforgettable night of live music, good vibes, and summer magic. Don't miss out — the rhythm of the season awaits!
                 </motion.p>
 
-                <div className='mt-15'>
+                <div className='md:mt-15'>
                     <button className='bg-black text-white py-4 px-10 mt-10 font-semibold hover:bg-[#333] rounded-xl cursor-pointer'>Learn More</button>
                 </div>
             </div>

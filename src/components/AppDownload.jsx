@@ -40,7 +40,7 @@ function AppDownload() {
                     ease: 'easeInOut'
                 }}
                 >
-                    <img src={Mockup} alt="Luxedrive App" className='w-[60%] md:w-[65%] lg:w-full'/>
+                    <img src={Mockup} alt="Luxedrive App" className='w-[56%] md:w-[65%] lg:w-full'/>
                 </motion.div>
             </div>
 
