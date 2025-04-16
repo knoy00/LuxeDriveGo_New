@@ -5,24 +5,24 @@ import Playstore from '../assets/icons/playstore.png'
 import Mockup from '../assets/images/mockup.png'
 function AppDownload() {
   return (
-    <div className='w-full bg-white pt-20 font-SFPro px-10 h-screen'>
-        <div className='max-w-[1400px] mx-auto px-10'>
-            <div className='flex justify-between items-center'>
+    <div className='w-full  pt-20 font-SFPro px-10 h-screen'>
+        <div className='max-w-[1400px] mx-auto px-0 lg:px-10'>
+            <div className='flex flex-col lg:flex-row justify-between items-center gap-y-4 h-full lg:h-[85vh]'>
                 <div>
-                    <h1 className='lg:text-[52px] font-semibold'>Download Our <br /> Mobile App.</h1>
-                    <p className='mt-5 lg:h-[100px] lg:w-[500px] max-w-[450px text-[#999]'>Discover the convenience of our mobile app, designed for a seamless and hassle-free experience.</p>
+                    <h1 className=' text-center text-[40px] sm:w-full lg:text-[52px] font-semibold sm:text-center lg:text-left lg:max-w-[450px]'>Download Our Mobile App.</h1>
+                    <p className='text-center text-[17px] sm:text-center lg:max-w-[350px] mt-5 lg:h-[100px] lg:w-[500px] sm:w-full text-[#999] lg:text-left'>Discover the convenience of our mobile app, designed for a seamless and hassle-free experience.</p>
 
-                    <div className='flex justify-between items-center mt-10 gap-x-10'>
-                        <div className='flex items-center  border-2 border-black rounded-2xl px-5 py-3 w-[250px] max-w-[250px] lg:gap-x-5 cursor-pointer hover:bg-[#dfdfdfb2]'>
-                            <img src={Apple} alt="" />
+                    <div className='flex flex-col lg:flex-row justify-between items-center mt-10 gap-y-5 lg:gap-x-10'>
+                        <div className='flex items-center gap-x-3  border-2 border-black rounded-2xl px-5 py-3 w-[250px] max-w-[250px] lg:gap-x-5 cursor-pointer hover:bg-[#dfdfdfb2] sm:gap-x-3'>
+                            <img src={Apple} alt="Apple" />
                             <div>
                                 <p className='text-[#999]'>Download on the </p>
                                 <h3 className='font-semibold'>App Store</h3>
                             </div>
                         </div>
 
-                        <div className='flex items-center border-2 border-black rounded-2xl px-5 py-3 w-[250px] max-w-[250px] lg:gap-x-5 cursor-pointer hover:bg-[#dfdfdfb2]'>
-                            <img src={Playstore} alt="" className='w-9'/>
+                        <div className='flex  items-center gap-x-3 border-2 border-black rounded-2xl px-5 py-3 w-[250px] max-w-[250px] lg:gap-x-5 cursor-pointer hover:bg-[#dfdfdfb2] sm:gap-x-5'>
+                            <img src={Playstore} alt="Google Play" className='w-9'/>
                             <div>
                                 <p className='text-[#999]'>Get it on </p>
                                 <h3 className='font-semibold'>Google Play</h3>
@@ -30,9 +30,18 @@ function AppDownload() {
                         </div>
                     </div>
                 </div>
-                <div className='w-90'>
-                    <img src={Mockup} alt="Luxedrive App" className='w-full'/>
-                </div>
+                <motion.div className='w-90 flex justify-center items-center'
+                animate={{
+                    marginTop: ['0%', '2%', '0%'],
+                }}
+                transition={{
+                    duration: 1.2,
+                    repeat: Infinity,
+                    ease: 'easeInOut'
+                }}
+                >
+                    <img src={Mockup} alt="Luxedrive App" className='w-[60%] md:w-[65%] lg:w-full'/>
+                </motion.div>
             </div>
 
         </div>
