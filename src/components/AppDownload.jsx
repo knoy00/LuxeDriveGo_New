@@ -5,10 +5,10 @@ import Playstore from '../assets/icons/playstore.png'
 import Mockup from '../assets/images/mockup.png'
 function AppDownload() {
   return (
-    <div className='w-full  pt-20 font-SFPro px-5 overflow-hidden'>
+    <div className='w-full  pt-20 font-SFPro px-5'>
         <div className='max-w-[1400px] mx-auto px-0 lg:px-10 md:bg-yellow-400 md:py-5'>
-            <div className='flex flex-col lg:flex-row justify-between items-center gap-y-4 h-full lg:h-[85vh]'>
-                <div>
+            <div className='h-[95vh] flex flex-col lg:flex-row justify-between items-center gap-y-4 lg:h-[85vh] sm:bg-amber-600'>
+                <div className=''>
                     <h1 className=' text-center text-[40px] sm:w-full lg:text-[52px] font-semibold sm:text-center lg:text-left lg:max-w-[450px]'>Download Our Mobile App.</h1>
                     <p className='text-center text-[17px] sm:text-center lg:max-w-[350px] mt-5 lg:h-[100px] lg:w-[500px] sm:w-full text-[#999] lg:text-left'>Discover the convenience of our mobile app, designed for a seamless and hassle-free experience.</p>
 
@@ -30,7 +30,7 @@ function AppDownload() {
                         </div>
                     </div>
                 </div>
-                <motion.div className='w-90 flex justify-center items-center md:bg-blue-700'
+                <motion.div className='w-90 flex justify-center items-center sm:bg-blue-700 sm:h-[90%]'
                 animate={{
                     marginTop: ['0%', '2%', '0%'],
                 }}
