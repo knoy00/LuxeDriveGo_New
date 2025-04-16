@@ -5,7 +5,7 @@ import Playstore from '../assets/icons/playstore.png'
 import Mockup from '../assets/images/mockup.png'
 function AppDownload() {
   return (
-    <div className='w-full  pt-20 font-SFPro px-5 '>
+    <div className='w-full  pt-20 font-SFPro px-5 overflow-hidden'>
         <div className='max-w-[1400px] mx-auto px-0 lg:px-10 md:bg-yellow-400 md:py-5'>
             <div className='flex flex-col lg:flex-row justify-between items-center gap-y-4 h-full lg:h-[85vh]'>
                 <div>
