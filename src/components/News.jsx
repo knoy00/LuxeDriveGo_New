@@ -8,7 +8,7 @@ function News() {
 
 
   return (
-    <div className='w-full bg-[#fff] h-[80vh] font-SFPro sm:bg-pink-500 md:bg-green-500 lg:bg-blue-500'>
+    <div className='w-full bg-[#fff] h-[80vh] font-SFPro sm:bg-pink-500 md:bg-green-500 lg:bg-blue-500 py-10 sm:h-[90vh] mt-20 md:h-screen lg:max-h-[75vh]'>
       <div className='max-w-[1400px] mx-auto py-10 px-10'>
         <div>
             <motion.h1 className='text-[40px] lg:text-[48px] font-semibold'
@@ -19,7 +19,7 @@ function News() {
             >News and Updates</motion.h1>
         </div>
 
-        <div className='flex flex-col lg:flex-row lg:justify-between  lg:gap-x-10 mt-10 w-full'>
+        <div className='flex flex-col gap-y-10 lg:flex-row lg:justify-between  lg:gap-x-10 mt-10 w-full'>
             <div>
                 <motion.h2 className='text-[18px] underline-offset-4 underline lg:text-[30px]'
                 initial={{opacity: 0, y: 200, filter: "blur(50px)"}}
