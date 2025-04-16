@@ -8,7 +8,7 @@ function News() {
 
 
   return (
-    <div className='w-full bg-[#fff] font-SFPro sm:bg-pink-500 md:bg-green-500 lg:bg-blue-500 py-10 mt-10'>
+    <div className='w-full bg-[#fff] font-SFPro py-10 mt-10'>
       <div className='max-w-[1400px] mx-auto py-10 px-10'>
         <div>
             <motion.h1 className='text-[40px] lg:text-[48px] font-semibold'
@@ -51,7 +51,7 @@ function News() {
                     <button className='bg-black text-white py-4 px-10 mt-10 font-semibold hover:bg-[#333] rounded-xl cursor-pointer'>Learn More</button>
                 </div>
             </div>
-            <div className='lg:w-[1400px] w-[550px] '>
+            <div className='lg:w-[1400px] w-full sm:w-[600px] md:w-[650px]  sm:flex sm:justify-center sm:items-center'>
                 <img src={Flyer} alt="Summer Flyer" className='w-full lg:w-full rounded-2xl'/>
             </div>
         </div>
