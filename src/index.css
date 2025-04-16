@@ -12,5 +12,7 @@
 
 @theme {
   --font-helvetica: Helvetica, Poppins, "sans-serif";
-  --font-SFPro: SFPro, "Poppins", "sans-serif"
+  /* --font-SFPro: SFPro, "Poppins", "sans-serif" */
+  --font-Segoe: "Segoe UI", SFPro, "Roboto", "sans-serif"
+  --font-SFPro: -apple-system, BlinkMacSystemFont, Poppins, sans-serif;
 }

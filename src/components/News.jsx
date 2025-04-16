@@ -8,7 +8,7 @@ function News() {
 
 
   return (
-    <div className='w-full bg-[#fff] font-SFPro py-10 mt-10'>
+    <div className='w-full bg-[#eeeeeeb2] font-helvetica py-10 mt-10'>
       <div className='max-w-[1400px] mx-auto py-10 px-10'>
         <div>
             <motion.h1 className='text-[40px] lg:text-[48px] font-semibold'
