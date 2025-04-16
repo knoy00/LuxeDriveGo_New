@@ -5,8 +5,8 @@ import Playstore from '../assets/icons/playstore.png'
 import Mockup from '../assets/images/mockup.png'
 function AppDownload() {
   return (
-    <div className='w-full  pt-20 font-SFPro px-10 '>
-        <div className='max-w-[1400px] mx-auto px-0 lg:px-10'>
+    <div className='w-full  pt-20 font-SFPro px-5 '>
+        <div className='max-w-[1400px] mx-auto px-0 lg:px-10 md:bg-yellow-400 md:py-5'>
             <div className='flex flex-col lg:flex-row justify-between items-center gap-y-4 h-full lg:h-[85vh]'>
                 <div>
                     <h1 className=' text-center text-[40px] sm:w-full lg:text-[52px] font-semibold sm:text-center lg:text-left lg:max-w-[450px]'>Download Our Mobile App.</h1>
@@ -30,7 +30,7 @@ function AppDownload() {
                         </div>
                     </div>
                 </div>
-                <motion.div className='w-90 flex justify-center items-center'
+                <motion.div className='w-90 flex justify-center items-center md:bg-blue-700'
                 animate={{
                     marginTop: ['0%', '2%', '0%'],
                 }}
@@ -40,7 +40,7 @@ function AppDownload() {
                     ease: 'easeInOut'
                 }}
                 >
-                    <img src={Mockup} alt="Luxedrive App" className='w-[56%] md:w-[65%] lg:w-full'/>
+                    <img src={Mockup} alt="Luxedrive App" className='w-[56%] md:w-[60%] lg:w-full'/>
                 </motion.div>
             </div>
 
