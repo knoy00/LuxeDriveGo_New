@@ -23,7 +23,7 @@ function HowItWorksElectric() {
   return (
     <>
         <img src={Ebike} onLoad={handleLoadedImages} style={{display: 'none'}} alt="Ebike" />
-        { <div className='w-full px-10 flex flex-col justify-center items-center gap-y-10 md:flex md:justify-center md:items-center md:space-x-10 mt-20 text-[#444] py-10 sm:bg-red-300 md:bg-red-800 lg:bg-green-700'>
+        {<div className='w-full px-10 flex flex-col justify-center items-center md:text-center gap-y-10 md:flex md:justify-center md:items-center md:space-x-10 mt-20 text-[#444] py-10 lg:flex-row lg:justify-center lg:items-center sm:bg-red-300 md:bg-red-800 lg:bg-green-700'>
             <div className='w-full'>
                 <motion.h1 
                 ref={ref2}
@@ -45,7 +45,7 @@ function HowItWorksElectric() {
                     Getting around campus just got easier. Find a nearby e-bike using the app, unlock it, and ride wherever you need to go — fast, easy, and affordable. <br/> Scroll to see how it works or hop on now by picking your start and end points.
                 </motion.p>
             </div>
-            {allImagesLoaded &&<motion.img src={Ebike} alt="E-bike" className='w-120 rounded-3xl'
+            {allImagesLoaded &&<motion.img src={Ebike} alt="E-bike" className='w-120 rounded-3xl md:w-200 md:h-100 md:object-cover md:object-center lg:h-130'
             ref={ref2}
             initial={{opacity: 0, filter: "blur(50px)"}}
             animate={isInView2 ? {opacity:1, filter: "blur(0px)"} : {}}

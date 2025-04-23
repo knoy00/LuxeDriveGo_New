@@ -20,8 +20,8 @@ function GettingStartedElectric() {
     const isInView3 = useInView(ref3, {once: true});
   return (
     <div className='w-full  py-10'>
-        <div className='mt-10 '>
-            <motion.h1 className='text-[30px] underline font-regular text-[#686868]'
+        <div className='px-10 md:mt-10 '>
+            <motion.h1 className='text-[22px] lg:text-[30px] underline font-regular text-[#686868]'
             initial={{opacity: 0, filter: "blur(50px)"} }
             animate={isInView3 ? {opacity: 1, filter: "blur(0px)"} : {}}
             transition={{duration: .8, ease: 'easeInOut'}}
@@ -29,7 +29,7 @@ function GettingStartedElectric() {
             >
                 Register as a Student
             </motion.h1>
-            <motion.p ref={ref3} className='text-[20px] font-light text-[#8e8e8e] mt-5'
+            <motion.p ref={ref3} className='text-[16px] md:text-[20px] font-light text-[#8e8e8e] mt-5'
             initial={{opacity: 0, filter: "blur(50px)"} }
             animate={isInView3 ?{opacity: 1, filter: "blur(0px)"} : {}}
             transition={{duration: .8, ease: 'easeInOut'}}
@@ -38,14 +38,14 @@ function GettingStartedElectric() {
             </motion.p>
         </div>
 
-        <motion.h1 ref={ref3} className='text-[30px] font-regular text-[#686868] mt-10' 
+        <motion.h1 ref={ref3} className='text-[22px] lg:text-[30px] underline font-regular text-[#686868] mt-10 px-10' 
         initial={{opacity: 0, filter: "blur(50px)"} }
         animate={isInView3 ?{opacity: 1, filter: "blur(0px)"} : {}}
         transition={{duration: .8, ease: 'easeInOut'}}
         >
             Getting Started
         </motion.h1>
-        <motion.p ref={ref3} className='text-[20px] font-light text-[#8e8e8e] mt-2'
+        <motion.p ref={ref3} className='text-[16px] md:text-[20px] font-light text-[#8e8e8e] mt-2 px-10'
         initial={{opacity: 0, filter: "blur(50px)"} }
         animate={isInView3 ?{opacity: 1, filter: "blur(0px)"} : {}}
         transition={{duration: .8, ease: 'easeInOut'}}
