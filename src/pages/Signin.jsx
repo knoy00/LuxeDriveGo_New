@@ -5,7 +5,7 @@ import appleIcon from '../assets/icons/apple.png'
 function Signin() {
   return (
     <div className='w-full h-screen'>
-        <Navbar />
+        <Navbar signup="Sign Up"/>
         <div className='flex justify-center items-center w-full mt-50'>
             <div className='text-center px-5 flex flex-col w-100'>
                 <h1 className='text-3xl mb-7'>Sign In</h1>

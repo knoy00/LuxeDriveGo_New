@@ -8,6 +8,11 @@
   src: url()
 }
 
+@font-face {
+  font-family: PPMori;
+  src: url("../src/assets/fonts/PPMori/PPMori-Regular.otf")
+}
+
 @import "tailwindcss";
 
 @theme {
@@ -15,4 +20,5 @@
   /* --font-SFPro: SFPro, "Poppins", "sans-serif" */
   --font-Segoe: "Segoe UI", SFPro, "Roboto", "sans-serif"
   --font-SFPro: -apple-system, BlinkMacSystemFont, Poppins, sans-serif;
+  --font-PPMori: PPMori, Helvetica, "sans-serif"
 }

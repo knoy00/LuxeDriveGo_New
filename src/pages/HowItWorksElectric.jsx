@@ -23,11 +23,11 @@ function HowItWorksElectric() {
   return (
     <>
         <img src={Ebike} onLoad={handleLoadedImages} style={{display: 'none'}} alt="Ebike" />
-        { <div className='w-full flex justify-center items-center space-x-10 mt-20 text-[#444] py-10'>
+        { <div className='w-full px-10 flex flex-col justify-center items-center gap-y-10 md:flex md:justify-center md:items-center md:space-x-10 mt-20 text-[#444] py-10 sm:bg-red-300 md:bg-red-800 lg:bg-green-700'>
             <div className='w-full'>
                 <motion.h1 
                 ref={ref2}
-                className='text-5xl font-semibold mb-10'
+                className='text-[25px] mb-5 md:text-5xl font-semibold md:mb-10'
                 initial={{opacity: 0, y: 200, filter: "blur(50px)"} }
                 animate={isInView2 ? {opacity: 1, y: 0, filter: "blur(0px)"}: {opacity: 0, y: 200,}}
                 transition={{duration: .8, ease: 'easeInOut'}}
@@ -35,7 +35,7 @@ function HowItWorksElectric() {
                     How it works
                 </motion.h1>
                 <motion.p
-                className='text-xl font-light text-[#424242]'
+                className='text-l md:text-xl font-light text-[#424242]'
                 ref={ref2}
                 initial={{opacity: 0, y: 200, filter: "blur(50px)"} }
                 animate={isInView2 ? {opacity: 1, y: 0, filter: "blur(0px)"}: {opacity: 0, y: 200, }}
